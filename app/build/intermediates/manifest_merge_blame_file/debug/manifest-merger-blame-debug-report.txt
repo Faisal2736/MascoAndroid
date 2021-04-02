@@ -534,11 +534,11 @@
 281-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\e3d2c7fee69628b99f09cb39f07cfedf\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:43:13-69
 282
 283        <meta-data
-283-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\beab73980e359aec1cba8fb43f24b97b\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
+283-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\412675886e7066e5bf0be754e26e507a\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
 284            android:name="com.google.android.gms.version"
-284-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\beab73980e359aec1cba8fb43f24b97b\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
+284-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\412675886e7066e5bf0be754e26e507a\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
 285            android:value="@integer/google_play_services_version" />
-285-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\beab73980e359aec1cba8fb43f24b97b\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
+285-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\412675886e7066e5bf0be754e26e507a\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
 286
 287        <provider
 287-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\H P\.gradle\caches\transforms-2\files-2.1\246b7b185fd483522d27f5b84e056744\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
