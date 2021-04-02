@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1F0F7"
+            android:padding="15dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                style="@style/TvSubHeading"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Rs0"
+                style="@style/TvHeading"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/discountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView31"
+                android:layout_marginTop="10dp"
+                android:text="Discount"
+                style="@style/TvSubHeading"
+                android:textColor="@color/md_green_A700"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cartPageDiscountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView31"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:text="Rs0"
+                style="@style/TvHeading"
+                android:textColor="@color/md_green_A700"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discountText"
+                android:layout_marginTop="10dp"
+                android:text="Grand Total After Discount"
+                style="@style/TvSubHeading"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discountText"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:text="Rs0"
+                style="@style/TvSubHeading"
+                android:textSize="26sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32dp"
+
+                android:layout_height="32dp"
+                android:src="@drawable/ic_tick">
+
+            </ImageView>
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/md_green_A700" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+
+           <View
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/md_grey_500" />
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1:Your Bill"
+                android:gravity="left|center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textColor="@color/md_green_A700"/>
+
+
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="2:Place Order"
+                android:gravity="right|center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textColor="@color/md_grey_700"/>
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="3:Complete"
+                android:gravity="right|center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textColor="@color/md_grey_700"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCartProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:listitem="@layout/cart_list_item"
+            android:nestedScrollingEnabled="false"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/md_grey_400">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Sub Total"
+                android:gravity="left|center"
+                android:textSize="20sp"
+                android:textColor="@color/md_grey_800"/>
+
+            <TextView
+                android:id="@+id/cartPageTotalAmountTextView"
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+
+                android:text="40"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/md_grey_400">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Delivery Charges"
+                android:gravity="left|center"
+                android:textSize="20sp"
+                android:textColor="@color/md_grey_800"/>
+
+            <TextView
+                android:id="@+id/all_tv"
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+
+                android:text="40"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/md_grey_400">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Use Credit"
+                android:gravity="left|center"
+                android:textSize="20sp"
+                android:textColor="@color/md_grey_800"/>
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+
+                android:text="0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/md_grey_400">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Total Amount"
+                android:gravity="left|center"
+                android:textSize="20sp"
+                android:textColor="@color/md_grey_800"/>
+
+            <TextView
+                android:id="@+id/cartPageGrandTotalTextView"
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="right|center"
+
+                android:text="40"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/md_grey_400">
+
+        </View>
+
+        <Button
+            android:id="@+id/cartProceedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#F48607"
+            android:text="Proceed"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="80dp"
+            />
+
+    </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

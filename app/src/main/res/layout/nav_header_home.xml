@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:orientation="vertical"
+            android:layout_below="@+id/imageView">
+
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TvHeading"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/md_black_1000" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_marginTop="8dp"
+                style="@style/TvMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text=" Adress"
+                android:padding="5dp"
+                android:drawablePadding="5dp"
+                android:drawableEnd="@drawable/ic_location_primary"
+                android:background="@drawable/textview_border"
+                android:textColor="@color/md_black_1000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/TvSubHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="Please Login or create account for free"
+                android:textColor="@color/md_white_1000" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

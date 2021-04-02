@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.semicolons.masco.pk.uiActivities.FAQsActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_400"
+                android:padding="10dp"
+                android:id="@+id/about_us"
+                android:text="About Us"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp" />
+
+            <com.semicolons.masco.pk.Utils.NonScrollExpandableListView
+                android:id="@+id/lvExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_400"
+                android:padding="10dp"
+                android:text="Delivery"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp" />
+
+
+            <com.semicolons.masco.pk.Utils.NonScrollExpandableListView
+                android:id="@+id/lvExp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/delivery1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_400"
+                android:padding="10dp"
+                android:text="Cancellation"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp" />
+
+            <com.semicolons.masco.pk.Utils.NonScrollExpandableListView
+                android:id="@+id/lvExp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+
+                android:padding="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

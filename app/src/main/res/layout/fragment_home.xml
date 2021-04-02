@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_margin="10dp"
+                android:background="@color/md_grey_700"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:padding="15dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/halant_medium"
+                            android:text="Points"
+                            android:textColor="@color/md_white_1000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pointsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/md_white_1000"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PKR"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/md_white_1000"
+                            android:layout_alignParentLeft="true" />
+
+                        <TextView
+                            android:id="@+id/totalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/md_white_1000"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.6"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:drawableRight="@drawable/ic_barcode"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/md_white_1000"
+                    android:textColor="@color/md_grey_700"
+                    android:text=" MY CLUB" />
+
+            </LinearLayout>
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="15dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="1.7dp"
+                app:sliderIndicatorRadius="1.2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="false" />
+
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:text="Super Store"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/md_white_1000"
+                android:elevation="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TvSubHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="Jao ni \n Mangvao! \n Paise Bachao ">
+
+                </TextView>
+
+
+                <ImageView
+                    android:id="@+id/imgSuperStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_brandbazar"></ImageView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_total_students"
+                            style="@style/TvSubHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Baby Store" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/md_grey_300">
+
+                        </View>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_baby_store">
+
+                        </ImageView>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TvSubHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Stationary Book Store" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/md_grey_300">
+
+                        </View>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_stationary_store">
+
+                        </ImageView>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSliderDeals"
+                android:layout_width="300dp"
+                android:layout_height="160dp"
+
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:elevation="4dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderStartAutoCycle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TvSubHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Beauty Store" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/md_grey_300">
+
+                        </View>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_beauty_store">
+
+                        </ImageView>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TvSubHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=" Garments Store" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/md_grey_300">
+
+                        </View>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_garment_store">
+
+                        </ImageView>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!--
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none"
+                            android:layout_marginTop="30dp"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:isScrollContainer="true"
+                                android:orientation="horizontal"
+                                android:scrollbars="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/monthly_outline_button">
+
+                                    <ImageView
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:alpha=".60"
+                                        android:src="@drawable/ic_discount" />
+
+                                    <TextView
+                                        style="@style/TvSubHeading"
+                                        android:layout_width="110dp"
+                                        android:layout_height="70dp"
+                                        android:gravity="center"
+                                        android:text="Monthly\nDeals"
+                                        android:textColor="@color/md_white_1000"
+                                        android:textStyle="bold">
+
+                                    </TextView>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/weekend_outline_button">
+
+                                    <ImageView
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:alpha=".60"
+                                        android:src="@drawable/ic_discount">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        style="@style/TvSubHeading"
+                                        android:layout_width="120dp"
+                                        android:layout_height="70dp"
+                                        android:gravity="center"
+                                        android:text="Weekend\nDeals"
+                                        android:textColor="@color/md_white_1000"
+                                        android:textStyle="bold">
+
+                                    </TextView>
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/grocery_outline_button">
+
+                                    <ImageView
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:alpha=".40"
+                                        android:src="@drawable/ic_grocery_bg">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        style="@style/TvSubHeading"
+                                        android:layout_width="120dp"
+                                        android:layout_height="70dp"
+                                        android:gravity="center"
+                                        android:text="Grocery\nDeals"
+                                        android:textColor="@color/md_white_1000"
+                                        android:textStyle="bold">
+
+                                    </TextView>
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/cosmetic_outline_button">
+
+                                    <ImageView
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:alpha=".95"
+                                        android:src="@drawable/ic_cosmetic">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        style="@style/TvSubHeading"
+                                        android:layout_width="120dp"
+                                        android:layout_height="70dp"
+                                        android:gravity="center"
+                                        android:text="Cosmetic\nDeals"
+                                        android:textColor="@color/md_white_1000"
+                                        android:textStyle="bold">
+
+                                    </TextView>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+            -->
+
+            <ImageView
+                android:id="@+id/img_lounge"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+
+                android:elevation="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_brandbazar">
+
+            </ImageView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+
+                    android:background="@color/md_white_1000"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_pet_store">
+
+                    </ImageView>
+
+                    <TextView
+                        style="@style/TvSubHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Pet Store"
+                        android:textColor="@color/md_black_1000">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_white_1000"
+
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_sport_store">
+
+                    </ImageView>
+
+
+                    <TextView
+                        style="@style/TvSubHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Sport Store"
+                        android:textColor="@color/md_black_1000">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_white_1000"
+
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_jewelary_store">
+
+                    </ImageView>
+
+
+                    <TextView
+                        style="@style/TvSubHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Jewelery Store"
+                        android:textColor="@color/md_black_1000">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_white_1000"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_crockery_store">
+
+                    </ImageView>
+
+
+                    <TextView
+                        style="@style/TvSubHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Crockery Store"
+                        android:textColor="@color/md_black_1000">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_titleRecy"
+                style="@style/TvSubHeading"
+                android:layout_marginTop="30dp"
+                android:background="@color/md_grey_300"
+                android:paddingStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp"
+                android:text="Featured Products"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_timeDeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/temp_category_item">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+
+
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

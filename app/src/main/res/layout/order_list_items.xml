@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/orderTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3016.80PKR"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/progressTextView"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Date"
+        android:layout_below="@id/view"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/orderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Number"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:layout_alignTop="@id/view"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/orderDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020-08-10"
+        android:layout_below="@id/orderNumber"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/orderNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4650"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_below="@id/orderNumber"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/orderTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:25:44"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_below="@id/orderDateTextView"/>
+
+    <Button
+        android:id="@+id/viewOrderDetailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderDateTextView"
+        android:layout_alignParentRight="true"
+        android:textColor="#78A2DE"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:text="View Order Detail" />
+
+
+</RelativeLayout>

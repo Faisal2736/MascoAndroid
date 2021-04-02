@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.semicolons.masco.pk.fragments.AllDealsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:isScrollContainer="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/slideViewImg">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgTourismHr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_men_lounge_bg"
+                        app:riv_corner_radius="10dip" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_deals"
+                    style="@style/TvHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text="Men\nLounge"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+                <!--            </RelativeLayout>-->
+
+                <!--            <RelativeLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="140dp"-->
+                <!--                android:layout_marginTop="35dp"-->
+                <!--                android:layout_marginEnd="5dp"-->
+                <!--                android:layout_marginRight="5dp">-->
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    app:cardCornerRadius="10dp"-->
+                <!--                    app:cardElevation="0dp">-->
+
+
+                <!--                    <com.makeramen.roundedimageview.RoundedImageView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:scaleType="centerCrop"-->
+                <!--                        android:src="@drawable/ic_women_lounge_bg"-->
+                <!--                        app:riv_corner_radius="10dip">-->
+
+                <!--                    </com.makeramen.roundedimageview.RoundedImageView>-->
+
+                <!--                </androidx.cardview.widget.CardView>-->
+
+
+                <!--                <TextView-->
+
+                <!--                    style="@style/TvHeading"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:padding="5dp"-->
+                <!--                    android:text="Women\nLounge"-->
+                <!--                    android:textColor="@color/md_white_1000"-->
+                <!--                    android:textStyle="bold">-->
+
+                <!--                </TextView>-->
+
+                <!--            </RelativeLayout>-->
+
+                <!--            <RelativeLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="140dp"-->
+                <!--                android:layout_marginTop="35dp"-->
+                <!--                android:layout_marginEnd="5dp"-->
+                <!--                android:layout_marginRight="5dp">-->
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    app:cardCornerRadius="10dp"-->
+                <!--                    app:cardElevation="0dp">-->
+
+                <!--                    <com.makeramen.roundedimageview.RoundedImageView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:scaleType="centerCrop"-->
+                <!--                        android:src="@drawable/ic_cosmetic_lounge_bg"-->
+                <!--                        app:riv_corner_radius="10dip" />-->
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <!--                <TextView-->
+
+                <!--                    style="@style/TvHeading"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_centerHorizontal="true"-->
+                <!--                    android:layout_marginTop="70dp"-->
+                <!--                    android:layout_marginRight="100dp"-->
+                <!--                    android:text="Cosmetic Lounge"-->
+                <!--                    android:textColor="@color/md_white_1000"-->
+                <!--                    android:textStyle="bold">-->
+
+                <!--                </TextView>-->
+
+                <!--            </RelativeLayout>-->
+
+                <!--            <RelativeLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="140dp"-->
+                <!--                android:layout_marginTop="35dp"-->
+                <!--                android:layout_marginEnd="5dp"-->
+                <!--                android:layout_marginRight="5dp"-->
+                <!--                android:layout_marginBottom="25dp">-->
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    app:cardCornerRadius="10dp"-->
+                <!--                    app:cardElevation="0dp">-->
+
+                <!--                    <com.makeramen.roundedimageview.RoundedImageView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:scaleType="centerCrop"-->
+                <!--                        android:src="@drawable/ic_garments_lounge_bg"-->
+                <!--                        app:riv_corner_radius="10dip" />-->
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <!--                <TextView-->
+
+                <!--                    style="@style/TvHeading"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentRight="true"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:padding="5dp"-->
+                <!--                    android:text="Graments\nLounge"-->
+                <!--                    android:textColor="@color/md_white_1000"-->
+                <!--                    android:textStyle="bold">-->
+
+                <!--                </TextView>-->
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_Deal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

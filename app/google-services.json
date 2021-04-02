@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "305821378242",
+    "project_id": "mascopk-24e80",
+    "storage_bucket": "mascopk-24e80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305821378242:android:8e03cea6b1797c4d013d5b",
+        "android_client_info": {
+          "package_name": "com.semicolons.masco.pk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305821378242-60qm9norcl6jd0ups896qchd46a53fb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.semicolons.masco.pk",
+            "certificate_hash": "adfcdc719209c224b6f80ee2e6c1fec38709261a"
+          }
+        },
+        {
+          "client_id": "305821378242-j27lr84jrl24td21culjnn08fr6d2kau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsUDQ4-j-Gc_PvG0rSlUUotM0mejy-IMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305821378242-j27lr84jrl24td21culjnn08fr6d2kau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

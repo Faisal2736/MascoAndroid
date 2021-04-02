@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Masco.pk</string>
+
+
+    <!--Show Dailog-->
+    <string name="connect_to_network">Connect to network or quit</string>
+    <string name="change_pwd_dialog">Your password has updated successfully. Please login with your new password.</string>
+    <string name="cencel_request">Are you sure you want to cancel the</string>
+    <string name="connect_to_wifi">Connect to WIFI</string>
+    <string name="quit">Quit</string>
+    <string name="please_wait">please wait ...</string>
+
+    <string name="version">Version</string>
+    <string name="True">True</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Log In</string>
+    <string name="forget_password">Forget password ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="title_activity_forget_password">ForgetPassword</string>
+    <string name="label_recover_password">Recover Password</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_my_wish_list">My Wish List</string>
+    <string name="menu_my_order">My Order</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="free_delivery">Free Delivery</string>
+    <string name="add_to_list">Add to List</string>
+    <string name="car_description">Description</string>
+    <string name="menu_my_account">My Account</string>
+    <string name="google_map_api" translatable="false">AIzaSyARFoq2DttFgYt1yYbFhXz7IewuLR5E02A</string>
+    <string name="when_someone_signs_up_for_deal_mall_and_use_your_invite_code_before_first_order_they_ll_get_rs_100_in_their_wallet">When someone signs up for MASCO.PK and use your invite code before first order, they\'ll get Rs 100 in their wallet.</string>
+    <string name="once_their_first_code_is_delivered_you_ll_get_rs150_in_your_wallet">Once their first code is delivered, you\'ll get Rs150 in your wallet.</string>
+    <string name="enter_invite_code">Enter Invite Code</string>
+    <string name="your_invite_code">Your Invite Code</string>
+    <string name="sign_in_to_get_code">Sign In to Get Code</string>
+    <string name="copy">Copy</string>
+    <string name="sign_in_to_invite_friends">Sign In To Invite Friends</string>
+    <string name="want_more_grocery">Want more Grocery</string>
+    <string name="for_less">for less?</string>
+    <string name="title_activity_about_us">About Us</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+</resources>

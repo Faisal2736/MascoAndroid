@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.semicolons.masco.pk.uiActivities.CheckoutActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32dp"
+
+                android:layout_height="32dp"
+                android:src="@drawable/ic_tick">
+
+            </ImageView>
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/md_green_A700" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_tick">
+
+            </ImageView>
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/md_grey_500" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="1:Your Bill"
+                android:textColor="@color/md_green_A700"
+                android:textSize="20sp" />
+
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="2:Place Order"
+                android:textColor="@color/md_green_A700"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/TvSubHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="3:Complete"
+                android:textColor="@color/md_grey_700"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/md_grey_500" />
+
+
+
+    </LinearLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        style="@style/TvSubHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:drawableLeft="@drawable/ic_location_primary"
+        android:drawablePadding="10dp"
+        android:text="Your Delivery Address">
+
+
+    </TextView>
+
+
+
+    <TextView
+        style="@style/TvMedium"
+        android:id="@+id/checkoutAddressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@null"
+        android:gravity="center|left"
+        android:hint="Address">
+
+
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/md_grey_500" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/TvSubHeading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="Delivery Day"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_calendar_today"
+            android:drawablePadding="4dp"
+
+            android:textColor="@color/md_black_1000" />
+
+
+        <TextView
+            android:id="@+id/tv_select_day"
+            style="@style/TvMedium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="Select Day"
+            android:padding="5dp"
+            android:drawableEnd="@drawable/ic_hamburger_day"
+            android:background="@drawable/textview_border"
+            android:textColor="@color/md_black_1000"
+         />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/TvSubHeading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="Delivery Time"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_calendar_today"
+            android:drawablePadding="4dp"
+
+            android:textColor="@color/md_black_1000"
+          />
+
+
+        <TextView
+            android:id="@+id/tv_select_time"
+            style="@style/TvMedium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="Select Time"
+            android:padding="5dp"
+            android:drawableEnd="@drawable/ic_hamburger_day"
+            android:background="@drawable/textview_border"
+            android:textColor="@color/md_black_1000"
+      />
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/confirmOrderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="#F48607"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+       />
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

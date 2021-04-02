@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cartRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/cartProductImageView"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:srcCompat="@drawable/cheetos" />
+
+    <TextView
+        android:id="@+id/cartProductNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cartProductImageView"
+        android:text="Cheetos Red Flaming Hot 32kg"
+        style="@style/TvSubHeading"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cartProductBrandTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cartProductNameTextView"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/cartProductImageView"
+        android:text="Str Brand"
+        style="@style/TvMedium"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cartProductPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cartProductBrandTextView"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/cartProductImageView"
+        android:text="Rs 19"
+        style="@style/TvSubHeading"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/cartAddButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/cartProductBrandTextView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_round_button"
+        android:textColor="@color/md_green_A700"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cartProductQuantityTextView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/cartProductBrandTextView"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/cartAddButton"
+        android:text="5"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/cartMinusButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/cartProductBrandTextView"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/cartProductQuantityTextView"
+        android:background="@drawable/ic_delete"
+        android:textColor="@color/md_red_A700"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>
