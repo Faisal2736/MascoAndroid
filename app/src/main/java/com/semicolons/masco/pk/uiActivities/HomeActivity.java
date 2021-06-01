@@ -21,17 +21,20 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
@@ -53,6 +56,9 @@ import com.semicolons.masco.pk.dataModels.Product;
 import com.semicolons.masco.pk.dataModels.SliderImagesResponse;
 import com.semicolons.masco.pk.dataModels.TopSellingResponse;
 import com.semicolons.masco.pk.dataModels.UpdateCartResponse;
+import com.semicolons.masco.pk.fragments.AccountFragment;
+import com.semicolons.masco.pk.fragments.CategoryFragment;
+import com.semicolons.masco.pk.fragments.HomeFragment;
 import com.semicolons.masco.pk.viewModels.CartViewModel;
 import com.semicolons.masco.pk.viewModels.HomeFragmentViewModel;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -82,15 +88,12 @@ public class HomeActivity extends AppCompatActivity
     private TextView tvName;
     private TextView tvEmail;
     private TextView tv_address;
-    private TextView all_tv;
-    private TextView tv_feature_all;
 
     private Boolean exit = false;
     private int userId;
     ImageView img_search;
 
-
-    SliderView sliderView;
+    private BottomNavigationView bottomNavigationView;
 
 
     boolean topSellingComplete = false;
@@ -128,6 +131,39 @@ public class HomeActivity extends AppCompatActivity
         Intent intent = getIntent();
         boolean isCartFragment = intent.getBooleanExtra("IS_CART_FRAGMENT", false);
 
+        HomeFragment fragment=new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.navFragmentContainer,fragment).commit();
+
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                Fragment fragment;
+
+                switch (item.getItemId()){
+                    case R.id.bottom_nav_home:
+                        fragment=new HomeFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.navFragmentContainer,fragment).commit();
+                        break;
+                    case R.id.bottom_nav_categories:
+                        fragment=new CategoryFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.navFragmentContainer,fragment).commit();
+                        break;
+                    case R.id.bottom_nav_account:
+                        fragment=new AccountFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.navFragmentContainer,fragment).commit();
+                        break;
+                    case R.id.bottom_nav_search:
+                        Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+
+                return true;
+
+            }
+        });
 
         sharedPreferences = getSharedPreferences(Constants.LOGIN_PREFERENCE, Context.MODE_PRIVATE);
 
@@ -184,10 +220,6 @@ public class HomeActivity extends AppCompatActivity
 
         getCartItemDb();
 
-        getAllProducts(1);
-        getLatestProducts(1);
-        getMainCategories();
-
 
         setTitle("Home");
     }
@@ -199,15 +231,9 @@ public class HomeActivity extends AppCompatActivity
         homeFragmentViewModel = new ViewModelProvider(this).get(HomeFragmentViewModel.class);
 
         img_search = findViewById(R.id.img_search);
-        sliderView = findViewById(R.id.imageSlider);
 
-        recyclerFeaturedProducts = findViewById(R.id.recy_timeDeal);
-        recyclerLatestProducts = findViewById(R.id.recyclerLatestProducts);
-        recy_main_categories = findViewById(R.id.recy_main_categories);
-        imgSuperStore = findViewById(R.id.imgSuperStore);
+
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
-        all_tv = findViewById(R.id.all_tv);
-        tv_feature_all = findViewById(R.id.tv_feature_all);
 
 
         isLogin = sharedPreferences.getBoolean(Constants.USER_IS_LOGIN, false);
@@ -215,9 +241,6 @@ public class HomeActivity extends AppCompatActivity
         if (isLogin) {
             userId = sharedPreferences.getInt(Constants.USER_ID, 0);
         }
-
-        showGif(imgSuperStore);
-        getSliderImages();
 
     }
 
@@ -229,114 +252,22 @@ public class HomeActivity extends AppCompatActivity
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(false);
 
-        img_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
-                startActivity(intent);
-            }
+        img_search.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
+            startActivity(intent);
         });
-        all_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, AllSubCategoriesActivities.class);
-                startActivity(intent);
-            }
-        });
-        tv_feature_all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, AllSubCategoriesActivities.class);
-                startActivity(intent);
-            }
-        });
-        btn_login_or_signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+        btn_login_or_signUp.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
 
-        btn_login_or_signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btn_login_or_signUp.setOnClickListener(view -> {
 
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                //intent.putExtra("ACTIVITY_NAME",HomeActivity.class.getSimpleName());
-                startActivity(intent);
+            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+            //intent.putExtra("ACTIVITY_NAME",HomeActivity.class.getSimpleName());
+            startActivity(intent);
 
-            }
         });
-    }
-
-    private void getSliderImages() {
-
-        if (AppClass.isOnline(HomeActivity.this)) {
-
-            homeFragmentViewModel.getSliderImages().observe(HomeActivity.this, new Observer<SliderImagesResponse>() {
-
-                @Override
-                public void onChanged(SliderImagesResponse sliderImagesResponse) {
-
-                    if (sliderImagesResponse.getStatus() == 1) {
-
-                        SliderAdapterExample adapter = new SliderAdapterExample(HomeActivity.this, sliderImagesResponse.getData());
-
-                        sliderView.setSliderAdapter(adapter);
-
-//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-                        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-                        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-                        sliderView.setIndicatorSelectedColor(Color.WHITE);
-                        sliderView.setIndicatorUnselectedColor(Color.GRAY);
-                        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
-                        sliderView.startAutoCycle();
-
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(HomeActivity.this, "" + sliderImagesResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        } else {
-            AppClass.offline(HomeActivity.this);
-        }
-    }
-
-
-    private void getMainCategories() {
-
-
-        homeFragmentViewModel.getAllCategories().observe(this, new Observer<CategoryDM>() {
-            @Override
-            public void onChanged(CategoryDM allBookingListResponseDM) {
-                if (allBookingListResponseDM != null) {
-                    progressDialog.dismiss();
-                    if (allBookingListResponseDM.getData() != null) {
-                        List<DataItem> resultItems = allBookingListResponseDM.getData();
-                        if (resultItems.size() > 0) {
-                            progressDialog.dismiss();
-
-                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(HomeActivity.this, RecyclerView.VERTICAL, false);
-                            recy_main_categories.setLayoutManager(layoutManager);
-                            mainCategoriesAdapter = new MainCategoriesAdapter(HomeActivity.this, resultItems);
-                            recy_main_categories.setAdapter(mainCategoriesAdapter);
-                        } else {
-//                            Intent intent = new Intent(SubCategoryActivity.this, ProductListActivity.class);
-//                            intent.putExtra(Constants.SUB_CATEGORY_OBJECT, dataItem);
-//                            startActivity(intent);
-//                            finish();
-
-
-                        }
-                    }
-                } else {
-                }
-
-            }
-        });
-
     }
 
     private void getCartItemDb() {
@@ -370,78 +301,6 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-    }
-
-    private void getAllProducts(int page) {
-
-        if (AppClass.isOnline(HomeActivity.this)) {
-
-            progressDialog.show();
-
-            homeFragmentViewModel.getAllProducts(page).observe(HomeActivity.this, new Observer<TopSellingResponse>() {
-
-                @Override
-                public void onChanged(TopSellingResponse topSellingResponse) {
-
-                    if (topSellingResponse.getStatus() == 1) {
-
-                        progressDialog.dismiss();
-
-                        topSellingComplete = true;
-
-                        Constants.topSellingProduct = topSellingResponse.getData();
-
-                        recyclerFeaturedProducts.setLayoutManager(new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false));
-                        timeDealAdapter = new TopSellingAdapter(topSellingResponse.getData(), cartDataTableList, HomeActivity.this);
-                        //   timeDealAdapter = new TopSellingAdapter(topSellingResponse.getData(), cartProductList, HomeActivity.this);
-                        recyclerFeaturedProducts.setAdapter(timeDealAdapter);
-
-                        clickListner();
-
-
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(HomeActivity.this, "" + topSellingResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        } else {
-            AppClass.offline(HomeActivity.this);
-        }
-    }
-
-    private void getLatestProducts(int page) {
-
-        if (AppClass.isOnline(HomeActivity.this)) {
-
-            progressDialog.show();
-
-            homeFragmentViewModel.getLatestProducts(page).observe(HomeActivity.this, new Observer<TopSellingResponse>() {
-
-                @Override
-                public void onChanged(TopSellingResponse topSellingResponse) {
-
-                    if (topSellingResponse.getStatus() == 1) {
-
-                        progressDialog.dismiss();
-
-
-                        Constants.latestProduct = topSellingResponse.getData();
-                        recyclerLatestProducts.setLayoutManager(new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false));
-                        latestSellingProductAdapter = new LatestSellingProductAdapter(topSellingResponse.getData(), cartDataTableList, HomeActivity.this);
-                        //   timeDealAdapter = new TopSellingAdapter(topSellingResponse.getData(), cartProductList, HomeActivity.this);
-                        recyclerLatestProducts.setAdapter(latestSellingProductAdapter);
-
-
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(HomeActivity.this, "" + topSellingResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        } else {
-            AppClass.offline(HomeActivity.this);
-        }
     }
 
 
@@ -927,10 +786,6 @@ public class HomeActivity extends AppCompatActivity
         AlertDialog dialog = builder.create();
         // display dialog
         dialog.show();
-    }
-
-    public void showGif(ImageView view) {
-        Glide.with(this).load(R.drawable.ic_super_store_gif).into(view);
     }
 
 }

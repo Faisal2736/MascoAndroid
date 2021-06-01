@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.michaldrabik:classicmaterialtimepicker:1.1.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca2524f232376a0e10d44828ebdb6ecf/jetified-classicmaterialtimepicker-1.1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca2524f232376a0e10d44828ebdb6ecf/jetified-classicmaterialtimepicker-1.1.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca2524f232376a0e10d44828ebdb6ecf/jetified-classicmaterialtimepicker-1.1.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7bde6ee49cd013fd48465a5e5f5ec0f/jetified-classicmaterialtimepicker-1.1.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7bde6ee49cd013fd48465a5e5f5ec0f/jetified-classicmaterialtimepicker-1.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7bde6ee49cd013fd48465a5e5f5ec0f/jetified-classicmaterialtimepicker-1.1.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

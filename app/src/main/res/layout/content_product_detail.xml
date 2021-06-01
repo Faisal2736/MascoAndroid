@@ -16,10 +16,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/tv_product_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/raleway_medium"
+                android:textColor="@color/md_grey_900"
+                android:textSize="22sp"
+                tools:text="Toyota Corolla GLi" />
+
             <ImageView
                 android:id="@+id/expandedImage"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:layout_below="@id/tv_product_title"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_deal_mall_splash"
                 app:layout_collapseMode="parallax"
@@ -29,9 +43,11 @@
                 android:id="@+id/img_addToFavLayout"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                app:srcCompat="@drawable/ic_star_border_black"                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_alignParentEnd="true">
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_star_border_black">
 
             </ImageView>
 
@@ -41,43 +57,79 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_product_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/raleway_medium"
-                    android:textColor="@color/md_grey_900"
-                    android:textSize="22sp"
-                    tools:text="Toyota Corolla GLi" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/raleway_medium"
-                    android:textColor="@color/md_grey_900"
-                    android:textSize="16sp"
-                    tools:text="980000 AED" />
-
-                <TextView
-                    android:id="@+id/tv_price"
-                    style="@style/TvHeading"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp"
+                        tools:text="980000 AED" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/relativeLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@color/md_grey_200"
-                    android:paddingStart="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/free_delivery"
-                    android:textAllCaps="true"
-                    android:textColor="@color/md_red_A400"
-                    android:textSize="25sp" />
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        style="@style/TvHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_delivery"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_red_A400"
+                        android:textSize="25sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_weight="1"
+                        android:text="-10%"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                        app:layout_constraintStart_toEndOf="@+id/tv_price"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 450"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Saved Rs 50"
+                        app:layout_constraintEnd_toEndOf="@+id/textView33"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -158,6 +210,7 @@
                     android:background="@color/md_grey_50"
                     android:orientation="horizontal"
                     android:padding="15dp"
+                    android:visibility="gone"
                     android:weightSum="2">
 
 
@@ -168,6 +221,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="15dp"
+                    android:visibility="gone"
                     android:weightSum="2">
 
                     <LinearLayout
@@ -198,6 +252,42 @@
 
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight=".5"
+                        android:background="@color/md_yellow_800"
+                        android:text="Add to cart"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_white_1000" />
+
+                    <Button
+                        android:id="@+id/btnBuyNow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/buy_now_bg"
+                        android:text="Buy Now"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_black_1000" />
+                </LinearLayout>
+
                 <TextView
                     style="@style/TvSubHeading"
                     android:layout_width="match_parent"
@@ -208,7 +298,7 @@
                     android:paddingLeft="10dp"
                     android:paddingTop="15dp"
                     android:paddingBottom="10dp"
-                    android:text="MORE LIKE THIS"
+                    android:text="Related Products"
                     android:textAllCaps="true"
                     android:textColor="@color/md_red_A400"
                     android:textSize="17sp" />
@@ -349,15 +439,17 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:text="Having Trouble? Let us know"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="18dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:weightSum="2">
 
                     <Button
@@ -386,10 +478,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:weightSum="2">
 
                     <Button
@@ -432,20 +525,6 @@
                     android:textSize="17sp" />
 
 
-                <Button
-                    android:id="@+id/btnPost"
-                    style="@style/TvHeading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/md_yellow_800"
-                    android:text="Add to cart"
-                    android:textAllCaps="true"
-                    android:textColor="@color/md_white_1000" />
             </LinearLayout>
 
         </RelativeLayout>

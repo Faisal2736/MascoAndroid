@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -30,9 +31,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.semicolons.masco.pk.R;
+import com.semicolons.masco.pk.Utils.AppClass;
 import com.semicolons.masco.pk.Utils.Constants;
 import com.semicolons.masco.pk.Utils.Utilities;
 import com.semicolons.masco.pk.adapters.ProductsListAdapter;
+import com.semicolons.masco.pk.adapters.SliderAdapterExample;
 import com.semicolons.masco.pk.dataModels.AddFavResponse;
 import com.semicolons.masco.pk.dataModels.CartDataTable;
 import com.semicolons.masco.pk.dataModels.CartResponse;
@@ -40,6 +43,7 @@ import com.semicolons.masco.pk.dataModels.DataItem;
 import com.semicolons.masco.pk.dataModels.DeleteFavResponse;
 import com.semicolons.masco.pk.dataModels.FavDataTable;
 import com.semicolons.masco.pk.dataModels.Product;
+import com.semicolons.masco.pk.dataModels.SliderImagesResponse;
 import com.semicolons.masco.pk.dataModels.TopSellingResponse;
 import com.semicolons.masco.pk.dataModels.UpdateCartResponse;
 import com.semicolons.masco.pk.itemDecorator.GridSpacingItemDecoration;
@@ -50,6 +54,8 @@ import com.semicolons.masco.pk.viewModels.CartViewModel;
 import com.semicolons.masco.pk.viewModels.HomeFragmentViewModel;
 import com.semicolons.masco.pk.viewModels.ProductListFragmentViewModel;
 import com.semicolons.masco.pk.viewModels.WishViewModel;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -85,6 +91,7 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
     private TabLayout tabLayout;
 
     ArrayList<Product> resultItems = new ArrayList<>();
+    private SliderView sliderView;
 
     int currentPage = 1;
     boolean isLastPage = false;
@@ -109,6 +116,7 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         initViews();
+        getSliderImages();
 
 
         img_search.setOnClickListener(new View.OnClickListener() {
@@ -269,6 +277,40 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
         }
     }
 
+    private void getSliderImages() {
+
+        if (AppClass.isOnline(this)) {
+
+            homeFragmentViewModel.getSliderImages().observe(this, new Observer<SliderImagesResponse>() {
+
+                @Override
+                public void onChanged(SliderImagesResponse sliderImagesResponse) {
+
+                    if (sliderImagesResponse.getStatus() == 1) {
+
+                        SliderAdapterExample adapter = new SliderAdapterExample(ProductListActivity.this, sliderImagesResponse.getData());
+
+                        sliderView.setSliderAdapter(adapter);
+
+//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+                        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+                        sliderView.setAutoCycleDirection(sliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+                        sliderView.setIndicatorSelectedColor(Color.WHITE);
+                        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+                        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
+                        sliderView.startAutoCycle();
+
+                    } else {
+                        progressDialog.dismiss();
+                        Toast.makeText(ProductListActivity.this, "" + sliderImagesResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        } else {
+            AppClass.offline(ProductListActivity.this);
+        }
+    }
+
     private void initViews() {
         context = this;
         Intent intent = getIntent();
@@ -281,6 +323,7 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
         categoryFragmentViewModel = new ViewModelProvider(this).get(ProductListFragmentViewModel.class);
         recy_categories = findViewById(R.id.recy_categories);
         tv_no_booking = findViewById(R.id.tv_no_booking);
+        sliderView = findViewById(R.id.productListingimageSlider1);
         sharedPreferences = getSharedPreferences(Constants.LOGIN_PREFERENCE, Context.MODE_PRIVATE);
         isLogin = sharedPreferences.getBoolean(Constants.USER_IS_LOGIN, false);
         homeFragmentViewModel = new ViewModelProvider(this).get(HomeFragmentViewModel.class);

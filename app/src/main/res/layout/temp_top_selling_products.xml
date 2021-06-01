@@ -1,8 +1,7 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardV_job_desc"
-    android:layout_width="170dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="true">
 
@@ -10,8 +9,8 @@
         android:id="@+id/linear_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/items"
+        android:orientation="vertical"
 
         android:padding="2dp">
 
@@ -72,21 +71,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:padding="4dp"
-            android:orientation="horizontal"
-            android:weightSum="3"
             android:background="@drawable/textview_border"
-            android:visibility="gone">
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:weightSum="3">
 
 
             <Button
                 android:id="@+id/prodMinusButtonHome"
                 android:layout_width="0dp"
                 android:layout_height="32dp"
+                android:layout_weight="1"
                 android:background="@drawable/ic_delete"
                 android:textColor="@color/md_red_A700"
                 android:textSize="20sp"
-                android:layout_weight="1"
                 android:textStyle="bold" />
 
             <TextView
@@ -94,9 +93,9 @@
                 android:layout_width="0dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="1"
                 android:textColor="#000000"
                 android:textSize="16sp" />
@@ -106,8 +105,8 @@
                 android:id="@+id/prodAddButtonHome"
                 android:layout_width="0dp"
                 android:layout_height="32dp"
-                android:background="@drawable/ic_round_button"
                 android:layout_weight="1"
+                android:background="@drawable/ic_round_button"
 
                 android:textColor="@color/md_green_A700"
                 android:textSize="20sp"

@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_logo"
@@ -19,14 +18,15 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
+        <activity android:name=".uiActivities.BrandIslandActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".uiActivities.AboutUsActivity"
             android:label="@string/title_activity_about_us"
-            android:parentActivityName=".uiActivities.HomeActivity">
-
-        </activity>
+            android:parentActivityName=".uiActivities.HomeActivity" />
         <activity android:name=".uiActivities.OrderReciptActivity" />
-        <activity android:name=".uiActivities.AllSubCategoriesActivities"
+        <activity
+            android:name=".uiActivities.AllSubCategoriesActivities"
             android:parentActivityName=".uiActivities.HomeActivity" />
         <activity
             android:name=".uiActivities.FAQsActivity"
@@ -37,11 +37,11 @@
         <activity
             android:name=".uiActivities.WishListActivity"
             android:parentActivityName=".uiActivities.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".uiActivities.CheckoutActivity"
             android:parentActivityName=".uiActivities.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".uiActivities.PointsActivity"
             android:parentActivityName=".uiActivities.HomeActivity" />

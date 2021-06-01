@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class SubCategoriesAdapter extends RecyclerView.Adapter<SubCategoriesAdap
 
         ImageView img_lounge;
         TextView tv_deals;
-        RelativeLayout rel_deal;
+        CardView rel_deal;
 
         public SingleItemRowHolder(View view) {
             super(view);
