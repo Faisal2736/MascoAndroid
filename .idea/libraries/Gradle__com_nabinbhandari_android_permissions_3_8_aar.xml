@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.nabinbhandari.android:permissions:3.8@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67713684bac233f2fc99fff8d16e7f6e/jetified-permissions-3.8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67713684bac233f2fc99fff8d16e7f6e/jetified-permissions-3.8/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67713684bac233f2fc99fff8d16e7f6e/jetified-permissions-3.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21eee7ee9d30c8d84f5cdf6004c83b5c/jetified-permissions-3.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21eee7ee9d30c8d84f5cdf6004c83b5c/jetified-permissions-3.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21eee7ee9d30c8d84f5cdf6004c83b5c/jetified-permissions-3.8/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nabinbhandari.android/permissions/3.8/6569da261cdfa3932ecda65e732f8280382e9045/permissions-3.8-javadoc.jar!/" />

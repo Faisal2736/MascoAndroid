@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rel_deal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
     android:elevation="4dp"
-    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true">
 
     <ImageView
@@ -18,16 +15,15 @@
         android:layout_gravity="end|center"
         android:layout_marginEnd="4dp"
 
-        android:src="@drawable/ic_arrow_right_24" />
+        android:src="@drawable/ic_arrow_right_24"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="5dp"
-        android:paddingTop="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="15dp">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/img_category"
@@ -38,22 +34,20 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:text="Fruits and Vegetables"
-                android:textColor="#000"
-                android:textSize="20sp" />
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Fruits and Vegetables" />
 
             <TextView
                 android:id="@+id/tv_no_of_items"
+                style="@style/TvHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
@@ -61,9 +55,9 @@
                 android:layout_marginRight="5dp"
                 android:maxLines="1"
                 android:text="48"
-                android:textStyle="bold"
                 android:textColor="@color/md_green_A700"
-                style="@style/TvHeading"/>
+                android:textStyle="bold"
+                android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>

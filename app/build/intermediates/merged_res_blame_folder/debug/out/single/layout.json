@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_second.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_progress.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\item_progress.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\deals_layout_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\deals_layout_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sub_category.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_sub_category.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_home.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\nav_header_home.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_cart.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\content_cart.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_menu.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_menu.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_category_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_category_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_deal.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_deal.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home2.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_home2.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_sub_category_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_sub_category_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_home.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\app_bar_home.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\slider_item_layout.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\slider_item_layout.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search_list.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_search_list.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\order_list_items.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\order_list_items.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_product_detail.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_product_detail.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_grp_header.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\list_grp_header.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_product_list.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_product_list.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_related_product_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_related_product_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_group_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\list_group_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_checkout_main.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_checkout_main.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_main_categories_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_main_categories_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_select_location.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_select_location.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_product_detail.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\content_product_detail.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\cart_list_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\cart_list_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\image_slider_layout_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\image_slider_layout_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_account2.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_account2.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\splash_main.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\splash_main.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_order_detail.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_order_detail.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_search.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\content_search.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_product_list.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_product_list.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_about_us.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_about_us.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_all_deals.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_all_deals.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_top_selling_products.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_top_selling_products.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_brand_island.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_brand_island.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\cardview_featured.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\cardview_featured.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_time_deal_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_time_deal_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_main_cat_list.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_main_cat_list.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\lounge_deal_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\lounge_deal_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\order_products_items.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\order_products_items.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\slider_activity.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\slider_activity.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_checkout.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_checkout.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_f_a_qs.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_f_a_qs.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\temp_product_item.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\temp_product_item.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_order_recipt.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_order_recipt.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_wish_list.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_wish_list.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_all_sub_categories_activities.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_all_sub_categories_activities.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_share_earn.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_share_earn.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\parent_recy_list_items.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\parent_recy_list_items.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_account.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_account.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\menu_cartcount.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\menu_cartcount.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_order.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_order.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\cardview_all_products.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\cardview_all_products.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_about_us.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\content_about_us.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_profile.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_cart.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_points.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\activity_points.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_home.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\content_home.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_category.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_category.xml"
+    },
+    {
+        "merged": "C:\\apps\\MascoPkGroceryApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_product_detail.xml",
+        "source": "C:\\apps\\MascoPkGroceryApp\\app\\src\\main\\res\\layout\\fragment_product_detail.xml"
+    }
+]

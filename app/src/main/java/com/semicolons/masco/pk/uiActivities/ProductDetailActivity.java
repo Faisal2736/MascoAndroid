@@ -118,7 +118,7 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Product Detail");
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         initViews();
@@ -550,7 +550,7 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
 
     private void prepareListData(List<Product> resultItems, String catid) {
 
-        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        layoutManager = new GridLayoutManager(this, 2);
         recy_categories.setLayoutManager(layoutManager);
         taskListAdap = new RelatedProductsListAdapter(this, resultItems, this, cartDataTableList, favDataTableArrayList, catid);
         recy_categories.setAdapter(taskListAdap);

@@ -1,16 +1,20 @@
 <component name="libraryTable">
   <library name="Gradle: io.github.informramiz:daypickerlibrary:1.3@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4e37f35427b943ba1606d388a237312/jetified-daypickerlibrary-1.3/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5f6a399e65850515472cf8846748f3c/jetified-daypickerlibrary-1.3/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d267c73432aafcbf70d0930b10a0d74/jetified-daypickerlibrary-1.3/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ed78f45c156d18ba179ee373b48b97e/jetified-daypickerlibrary-1.3/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78ad5fc2e82f81b102d58cfc8898d881/jetified-daypickerlibrary-1.3/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4e37f35427b943ba1606d388a237312/jetified-daypickerlibrary-1.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4e37f35427b943ba1606d388a237312/jetified-daypickerlibrary-1.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4e37f35427b943ba1606d388a237312/jetified-daypickerlibrary-1.3/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5f6a399e65850515472cf8846748f3c/jetified-daypickerlibrary-1.3/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5f6a399e65850515472cf8846748f3c/jetified-daypickerlibrary-1.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a5f6a399e65850515472cf8846748f3c/jetified-daypickerlibrary-1.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d267c73432aafcbf70d0930b10a0d74/jetified-daypickerlibrary-1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d267c73432aafcbf70d0930b10a0d74/jetified-daypickerlibrary-1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d267c73432aafcbf70d0930b10a0d74/jetified-daypickerlibrary-1.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ed78f45c156d18ba179ee373b48b97e/jetified-daypickerlibrary-1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ed78f45c156d18ba179ee373b48b97e/jetified-daypickerlibrary-1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ed78f45c156d18ba179ee373b48b97e/jetified-daypickerlibrary-1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78ad5fc2e82f81b102d58cfc8898d881/jetified-daypickerlibrary-1.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78ad5fc2e82f81b102d58cfc8898d881/jetified-daypickerlibrary-1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78ad5fc2e82f81b102d58cfc8898d881/jetified-daypickerlibrary-1.3/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.informramiz/daypickerlibrary/1.3/10017c6a940723b616a0a0bfb2941169e8a910c2/daypickerlibrary-1.3-javadoc.jar!/" />
