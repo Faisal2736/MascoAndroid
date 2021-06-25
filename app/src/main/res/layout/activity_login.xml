@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="190dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_the_younger" />
+        android:src="@drawable/sargodha_banner" />
 
     <LinearLayout
         android:id="@+id/linear_1"

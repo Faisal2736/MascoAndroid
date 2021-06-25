@@ -109,6 +109,7 @@
                         android:layout_marginStart="50dp"
                         android:layout_weight="1"
                         android:text="-10%"
+                        android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_price"
                         app:layout_constraintStart_toEndOf="@+id/tv_price"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -118,6 +119,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rs. 450"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_price" />
 
@@ -126,7 +128,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Saved Rs 50"
+                        android:text="Save Discount"
                         app:layout_constraintEnd_toEndOf="@+id/textView33"
                         app:layout_constraintTop_toBottomOf="@+id/tv_price" />
                 </androidx.constraintlayout.widget.ConstraintLayout>

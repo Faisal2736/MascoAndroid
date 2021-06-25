@@ -199,11 +199,7 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        prepareMenu(menu);
-        return true;
-    }
+
 
     @Override
     protected void onResume() {
@@ -256,6 +252,12 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
         super.onResume();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        prepareMenu(menu);
+        return true;
+    }
+
     public void prepareMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home, menu);
 
@@ -272,7 +274,6 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();
-
         prepareMenu(menu);
         return super.onPrepareOptionsMenu(menu);
     }

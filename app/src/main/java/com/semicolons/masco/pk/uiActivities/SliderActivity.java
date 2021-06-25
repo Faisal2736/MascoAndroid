@@ -34,9 +34,9 @@ public class SliderActivity extends AppCompatActivity {
         this.loc_btn =  findViewById(R.id.location_btn);
         ArrayList arrayList = new ArrayList();
         this.imageSliderModelList = arrayList;
-        this.imageSliderModelList.add(new ImageSliderModel(R.drawable.ic_grocery_masco));
-        this.imageSliderModelList.add(new ImageSliderModel(R.drawable.ic_stationary_mascopk));
-        this.imageSliderModelList.add(new ImageSliderModel(R.drawable.ic_cosmetics_masco));
+        this.imageSliderModelList.add(new ImageSliderModel(R.drawable.slider_1));
+        this.imageSliderModelList.add(new ImageSliderModel(R.drawable.slider_2));
+        this.imageSliderModelList.add(new ImageSliderModel(R.drawable.slider_3));
         this.sliderView.setSliderAdapter(new SliderAdapter(this, imageSliderModelList));
         this.sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         this.sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);

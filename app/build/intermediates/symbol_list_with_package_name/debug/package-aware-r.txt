@@ -2591,6 +2591,7 @@ drawable flag_wallis_and_futuna
 drawable flag_yemen
 drawable flag_zambia
 drawable flag_zimbabwe
+drawable gift
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradient
@@ -2698,6 +2699,7 @@ drawable ic_wallet
 drawable ic_women_lounge_bg
 drawable items
 drawable login_edittext
+drawable masco_pk
 drawable men_lounge_outline_button
 drawable monthly_outline_button
 drawable mtrl_dialog_background
@@ -2737,11 +2739,15 @@ drawable quantum_ic_cloud_off_vd_theme_24
 drawable quantum_ic_search_grey600_24
 drawable red_outline_button
 drawable rhombus
+drawable sargodha_banner
 drawable seasonal_outline_button
 drawable shadow_background
 drawable shape_circle_filled
 drawable shape_circle_filled_light
 drawable shape_circle_holo
+drawable slider_1
+drawable slider_2
+drawable slider_3
 drawable stationary_outline_button
 drawable test_custom_background
 drawable textview_border

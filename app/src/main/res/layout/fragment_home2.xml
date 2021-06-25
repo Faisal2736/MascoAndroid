@@ -47,10 +47,11 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    app:srcCompat="@drawable/ba"
+                    app:srcCompat="@drawable/masco_pk"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="fitXY"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -63,10 +64,13 @@
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    app:srcCompat="@drawable/ba"
+                    app:srcCompat="@drawable/gift"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="fitXY"
+
+
+                    />
             </LinearLayout>
 
             <com.smarteist.autoimageslider.SliderView
@@ -311,10 +315,11 @@
 
                 <ImageView
                     android:id="@+id/imageView13"
-                    app:srcCompat="@drawable/ba"
+                    app:srcCompat="@drawable/masco_pk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop" />
+
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -326,14 +331,15 @@
 
                 <ImageView
                     android:id="@+id/imageView14"
-                    app:srcCompat="@drawable/ba"
+                    app:srcCompat="@drawable/slider_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="fitXY" />
             </LinearLayout>
 
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/imageSlider1"
+                android:layout_marginTop="10dp"
                 app:sliderAnimationDuration="600"
                 app:sliderAutoCycleDirection="back_and_forth"
                 app:sliderAutoCycleEnabled="false"
@@ -419,14 +425,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
                 android:layout_margin="10dp"
-                android:background="@color/md_grey_300"
+                android:background="@drawable/ic_brand_bazar"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView32"
-                    style="@style/TvSubHeading"
+                    style="@style/TvHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/md_red_A700"
                     android:layout_gravity="center"
                     android:text="Brand Island" />
             </LinearLayout>
@@ -443,8 +450,8 @@
                     android:id="@+id/imageView15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ba" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sargodha_banner" />
             </LinearLayout>
 
             <com.smarteist.autoimageslider.SliderView
@@ -511,8 +518,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ba" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_grocery_masco" />
             </LinearLayout>
 
             <LinearLayout

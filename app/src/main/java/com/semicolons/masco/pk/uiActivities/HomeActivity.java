@@ -742,7 +742,11 @@ public class HomeActivity extends AppCompatActivity
             callIntent.setData(Uri.parse("tel:" + Constants.CALL_CENTER_NUMBER));
             startActivity(callIntent);
         } else if (id == R.id.nav_logout) {
-            logOutDialog("Logout", "Are you sure to logout?");
+            if (isLogin) {
+                logOutDialog("Logout", "Are you sure to logout?");
+            }else {
+                startActivity(new Intent(this, LoginActivity.class));
+            }
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

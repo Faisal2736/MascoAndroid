@@ -157,6 +157,8 @@ public class HomeFragment extends Fragment {
 
                 @Override
                 public void onChanged(SliderImagesResponse sliderImagesResponse) {
+                    progressDialog.dismiss();
+
 
                     if (sliderImagesResponse.getStatus() == 1) {
 
