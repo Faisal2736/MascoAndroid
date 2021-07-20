@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -98,6 +99,7 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
     boolean isLoading = false;
 
     ImageView img_search;
+    RelativeLayout searchRl;
 
     private boolean listSize = true;
     private boolean listLoaded = false;
@@ -116,10 +118,10 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         initViews();
-        getSliderImages();
+        //getSliderImages();
 
 
-        img_search.setOnClickListener(new View.OnClickListener() {
+        searchRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProductListActivity.this, SearchActivity.class);
@@ -323,7 +325,7 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
         categoryFragmentViewModel = new ViewModelProvider(this).get(ProductListFragmentViewModel.class);
         recy_categories = findViewById(R.id.recy_categories);
         tv_no_booking = findViewById(R.id.tv_no_booking);
-        sliderView = findViewById(R.id.productListingimageSlider1);
+        //sliderView = findViewById(R.id.productListingimageSlider1);
         sharedPreferences = getSharedPreferences(Constants.LOGIN_PREFERENCE, Context.MODE_PRIVATE);
         isLogin = sharedPreferences.getBoolean(Constants.USER_IS_LOGIN, false);
         homeFragmentViewModel = new ViewModelProvider(this).get(HomeFragmentViewModel.class);
@@ -337,6 +339,7 @@ public class ProductListActivity extends AppCompatActivity implements ProductsLi
         recy_categories.setAdapter(taskListAdap);
 
         img_search = findViewById(R.id.img_search);
+        searchRl = findViewById(R.id.searchRl);
 
 
         if (isLogin) {

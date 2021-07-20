@@ -5,11 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.semicolons.masco.pk.R;
 import com.smarteist.autoimageslider.SliderView;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class SliderActivityBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final CardView cardView;
@@ -28,28 +28,33 @@ public final class SliderActivityBinding implements ViewBinding {
   public final SliderView imageSlider;
 
   @NonNull
-  public final LinearLayout linear1;
-
-  @NonNull
   public final LinearLayout locationBtn;
 
   @NonNull
   public final TextView loginLink;
 
-  private SliderActivityBinding(@NonNull RelativeLayout rootView, @NonNull CardView cardView,
-      @NonNull SliderView imageSlider, @NonNull LinearLayout linear1,
-      @NonNull LinearLayout locationBtn, @NonNull TextView loginLink) {
+  @NonNull
+  public final ConstraintLayout relativeLayout4;
+
+  @NonNull
+  public final TextView textView36;
+
+  private SliderActivityBinding(@NonNull ConstraintLayout rootView, @NonNull CardView cardView,
+      @NonNull SliderView imageSlider, @NonNull LinearLayout locationBtn,
+      @NonNull TextView loginLink, @NonNull ConstraintLayout relativeLayout4,
+      @NonNull TextView textView36) {
     this.rootView = rootView;
     this.cardView = cardView;
     this.imageSlider = imageSlider;
-    this.linear1 = linear1;
     this.locationBtn = locationBtn;
     this.loginLink = loginLink;
+    this.relativeLayout4 = relativeLayout4;
+    this.textView36 = textView36;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -86,12 +91,6 @@ public final class SliderActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.linear1;
-      LinearLayout linear1 = rootView.findViewById(id);
-      if (linear1 == null) {
-        break missingId;
-      }
-
       id = R.id.location_btn;
       LinearLayout locationBtn = rootView.findViewById(id);
       if (locationBtn == null) {
@@ -104,8 +103,16 @@ public final class SliderActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      return new SliderActivityBinding((RelativeLayout) rootView, cardView, imageSlider, linear1,
-          locationBtn, loginLink);
+      ConstraintLayout relativeLayout4 = (ConstraintLayout) rootView;
+
+      id = R.id.textView36;
+      TextView textView36 = rootView.findViewById(id);
+      if (textView36 == null) {
+        break missingId;
+      }
+
+      return new SliderActivityBinding((ConstraintLayout) rootView, cardView, imageSlider,
+          locationBtn, loginLink, relativeLayout4, textView36);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

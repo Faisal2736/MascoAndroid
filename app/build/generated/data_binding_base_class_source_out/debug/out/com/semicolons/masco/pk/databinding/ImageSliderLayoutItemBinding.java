@@ -21,14 +21,10 @@ public final class ImageSliderLayoutItemBinding implements ViewBinding {
   @NonNull
   public final ImageView ivAutoImageSlider;
 
-  @NonNull
-  public final ImageView ivGifContainer;
-
   private ImageSliderLayoutItemBinding(@NonNull FrameLayout rootView,
-      @NonNull ImageView ivAutoImageSlider, @NonNull ImageView ivGifContainer) {
+      @NonNull ImageView ivAutoImageSlider) {
     this.rootView = rootView;
     this.ivAutoImageSlider = ivAutoImageSlider;
-    this.ivGifContainer = ivGifContainer;
   }
 
   @Override
@@ -64,14 +60,7 @@ public final class ImageSliderLayoutItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.iv_gif_container;
-      ImageView ivGifContainer = rootView.findViewById(id);
-      if (ivGifContainer == null) {
-        break missingId;
-      }
-
-      return new ImageSliderLayoutItemBinding((FrameLayout) rootView, ivAutoImageSlider,
-          ivGifContainer);
+      return new ImageSliderLayoutItemBinding((FrameLayout) rootView, ivAutoImageSlider);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

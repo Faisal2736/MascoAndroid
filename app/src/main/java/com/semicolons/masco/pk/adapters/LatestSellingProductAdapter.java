@@ -84,7 +84,7 @@ public class LatestSellingProductAdapter extends RecyclerView.Adapter<LatestSell
             public void onClick(View view) {
 
                 Intent intent = new Intent(context, ProductDetailActivity.class);
-                intent.putExtra(Constants.PRODUCT_OBJECT, product);
+                intent.putExtra(Constants.PRODUCT_OBJECT, topSellingList.get(position));
                 intent.putExtra(Constants.SUB_CATEGORY_ID, "60");
                 context.startActivity(intent);
 

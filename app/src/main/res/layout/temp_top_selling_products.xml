@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:id="@+id/linear_label"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:background="@drawable/items"
         android:orientation="vertical"
@@ -27,10 +27,11 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:fontFamily="@font/hind_medium"
-            android:maxLines="2"
-            android:text="Cheetos dbfsbflsblskbdsklbdlksbdklsbdklsbdkldbldadlabldbadsdsds"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Cheetos dbfsbflsb lskbdsk lbdlk sbdklsbdklsbdkldbldadlabldbadsdsds"
             android:textColor="@color/md_grey_900"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/price"

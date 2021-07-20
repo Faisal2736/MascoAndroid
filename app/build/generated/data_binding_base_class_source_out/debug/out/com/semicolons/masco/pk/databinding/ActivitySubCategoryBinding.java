@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,10 +27,10 @@ public final class ActivitySubCategoryBinding implements ViewBinding {
   public final SliderView imageSlider1;
 
   @NonNull
-  public final ImageView imageView17;
+  public final SliderView imageSlider2;
 
   @NonNull
-  public final ImageView imageView3;
+  public final ImageView imageView17;
 
   @NonNull
   public final ImageView imgSearch;
@@ -44,6 +45,9 @@ public final class ActivitySubCategoryBinding implements ViewBinding {
   public final RecyclerView rvMostPopular;
 
   @NonNull
+  public final RelativeLayout searchLayout;
+
+  @NonNull
   public final TextView textView15;
 
   @NonNull
@@ -53,19 +57,20 @@ public final class ActivitySubCategoryBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   private ActivitySubCategoryBinding(@NonNull LinearLayout rootView,
-      @NonNull SliderView imageSlider1, @NonNull ImageView imageView17,
-      @NonNull ImageView imageView3, @NonNull ImageView imgSearch,
+      @NonNull SliderView imageSlider1, @NonNull SliderView imageSlider2,
+      @NonNull ImageView imageView17, @NonNull ImageView imgSearch,
       @NonNull RecyclerView recyCategories, @NonNull RecyclerView rvBundleOffers,
-      @NonNull RecyclerView rvMostPopular, @NonNull TextView textView15,
-      @NonNull TextView textView29, @NonNull Toolbar toolbar) {
+      @NonNull RecyclerView rvMostPopular, @NonNull RelativeLayout searchLayout,
+      @NonNull TextView textView15, @NonNull TextView textView29, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.imageSlider1 = imageSlider1;
+    this.imageSlider2 = imageSlider2;
     this.imageView17 = imageView17;
-    this.imageView3 = imageView3;
     this.imgSearch = imgSearch;
     this.recyCategories = recyCategories;
     this.rvBundleOffers = rvBundleOffers;
     this.rvMostPopular = rvMostPopular;
+    this.searchLayout = searchLayout;
     this.textView15 = textView15;
     this.textView29 = textView29;
     this.toolbar = toolbar;
@@ -104,15 +109,15 @@ public final class ActivitySubCategoryBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView17;
-      ImageView imageView17 = rootView.findViewById(id);
-      if (imageView17 == null) {
+      id = R.id.imageSlider2;
+      SliderView imageSlider2 = rootView.findViewById(id);
+      if (imageSlider2 == null) {
         break missingId;
       }
 
-      id = R.id.imageView3;
-      ImageView imageView3 = rootView.findViewById(id);
-      if (imageView3 == null) {
+      id = R.id.imageView17;
+      ImageView imageView17 = rootView.findViewById(id);
+      if (imageView17 == null) {
         break missingId;
       }
 
@@ -140,6 +145,12 @@ public final class ActivitySubCategoryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.searchLayout;
+      RelativeLayout searchLayout = rootView.findViewById(id);
+      if (searchLayout == null) {
+        break missingId;
+      }
+
       id = R.id.textView15;
       TextView textView15 = rootView.findViewById(id);
       if (textView15 == null) {
@@ -158,9 +169,9 @@ public final class ActivitySubCategoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySubCategoryBinding((LinearLayout) rootView, imageSlider1, imageView17,
-          imageView3, imgSearch, recyCategories, rvBundleOffers, rvMostPopular, textView15,
-          textView29, toolbar);
+      return new ActivitySubCategoryBinding((LinearLayout) rootView, imageSlider1, imageSlider2,
+          imageView17, imgSearch, recyCategories, rvBundleOffers, rvMostPopular, searchLayout,
+          textView15, textView29, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

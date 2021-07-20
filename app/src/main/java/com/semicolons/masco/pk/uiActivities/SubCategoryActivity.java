@@ -9,9 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,11 +29,11 @@ import com.semicolons.masco.pk.Utils.AppClass;
 import com.semicolons.masco.pk.Utils.Constants;
 import com.semicolons.masco.pk.adapters.LatestSellingProductAdapter;
 import com.semicolons.masco.pk.adapters.SliderAdapterExample;
+import com.semicolons.masco.pk.adapters.SliderBannerAdapter;
 import com.semicolons.masco.pk.adapters.SubCategoriesAdapter;
 import com.semicolons.masco.pk.dataModels.CartDataTable;
-import com.semicolons.masco.pk.dataModels.CategoryDM;
 import com.semicolons.masco.pk.dataModels.DataItem;
-import com.semicolons.masco.pk.dataModels.SliderImagesResponse;
+import com.semicolons.masco.pk.dataModels.SliderImages;
 import com.semicolons.masco.pk.dataModels.TopSellingResponse;
 import com.semicolons.masco.pk.databinding.ActivitySubCategoryBinding;
 import com.semicolons.masco.pk.itemDecorator.GridSpacingItemDecoration;
@@ -44,7 +41,6 @@ import com.semicolons.masco.pk.viewModels.CartViewModel;
 import com.semicolons.masco.pk.viewModels.HomeFragmentViewModel;
 import com.semicolons.masco.pk.viewModels.SubCategoryFragmentViewModel;
 import com.smarteist.autoimageslider.SliderAnimations;
-import com.smarteist.autoimageslider.SliderView;
 
 public class SubCategoryActivity extends AppCompatActivity {
 
@@ -64,8 +60,10 @@ public class SubCategoryActivity extends AppCompatActivity {
     LatestSellingProductAdapter latestSellingProductAdapter;
     private List<CartDataTable> cartDataTableList = new ArrayList<>();
 
-    EditText et_search3;
     private TabLayout tabLayout;
+
+    public SubCategoryActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,44 +80,109 @@ public class SubCategoryActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(dataItem.getCategoryName());
 
-        binding.imgSearch.setOnClickListener(view -> {
+        binding.searchLayout.setOnClickListener(view -> {
             Intent intent = new Intent(SubCategoryActivity.this, SearchActivity.class);
             startActivity(intent);
         });
     }
 
+    private ArrayList<SliderImages> getSliderData(){
+
+        SliderImages sliderImages1 = new SliderImages();
+        sliderImages1.setImage_name("baby_care_slider");
+
+        SliderImages sliderImages2 = new SliderImages();
+        sliderImages2.setImage_name("bakery_and_frozen_food_slider");
+
+        SliderImages sliderImages3 = new SliderImages();
+        sliderImages3.setImage_name("clean_shain_slider");
+
+        SliderImages sliderImages4 = new SliderImages();
+        sliderImages4.setImage_name("grocery_slider");
+
+        SliderImages sliderImages5 = new SliderImages();
+        sliderImages5.setImage_name("personal_care_slider");
+
+        SliderImages sliderImages6 = new SliderImages();
+        sliderImages6.setImage_name("snakcs_and_beverages_slider");
+
+        SliderImages sliderImages7 = new SliderImages();
+        sliderImages7.setImage_name("stationery_slider");
+
+        ArrayList<SliderImages> list = new ArrayList<>();
+        list.add(sliderImages1);
+        list.add(sliderImages2);
+        list.add(sliderImages3);
+        list.add(sliderImages4);
+        list.add(sliderImages5);
+        list.add(sliderImages6);
+        list.add(sliderImages7);
+
+        return list;
+
+    }
+
+    private ArrayList<SliderImages> getBannerImages(){
+
+        SliderImages sliderImages1 = new SliderImages();
+        sliderImages1.setImage_name("baby_care_slider");
+
+        SliderImages sliderImages2 = new SliderImages();
+        sliderImages2.setImage_name("bakery_and_frozen_food_slider");
+
+        SliderImages sliderImages3 = new SliderImages();
+        sliderImages3.setImage_name("clean_shain_slider");
+
+        SliderImages sliderImages4 = new SliderImages();
+        sliderImages4.setImage_name("grocery_slider");
+
+        SliderImages sliderImages5 = new SliderImages();
+        sliderImages5.setImage_name("personal_care_slider");
+
+        SliderImages sliderImages6 = new SliderImages();
+        sliderImages6.setImage_name("snakcs_and_beverages_slider");
+
+        SliderImages sliderImages7 = new SliderImages();
+        sliderImages7.setImage_name("stationery_slider");
+
+        ArrayList<SliderImages> list = new ArrayList<>();
+        list.add(sliderImages1);
+        list.add(sliderImages2);
+        list.add(sliderImages3);
+        list.add(sliderImages4);
+        list.add(sliderImages5);
+        list.add(sliderImages6);
+        list.add(sliderImages7);
+
+        return list;
+
+    }
+
     private void getSliderImages() {
 
-        if (AppClass.isOnline(this)) {
+        SliderAdapterExample adapter = new SliderAdapterExample(SubCategoryActivity.this, getSliderData());
 
-            homeFragmentViewModel.getSliderImages().observe(this, new Observer<SliderImagesResponse>() {
-
-                @Override
-                public void onChanged(SliderImagesResponse sliderImagesResponse) {
-
-                    if (sliderImagesResponse.getStatus() == 1) {
-
-                        SliderAdapterExample adapter = new SliderAdapterExample(SubCategoryActivity.this, sliderImagesResponse.getData());
-
-                        binding.imageSlider1.setSliderAdapter(adapter);
+        binding.imageSlider1.setSliderAdapter(adapter);
 
 //                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-                        binding.imageSlider1.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-                        binding.imageSlider1.setAutoCycleDirection(binding.imageSlider1.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-                        binding.imageSlider1.setIndicatorSelectedColor(Color.WHITE);
-                        binding.imageSlider1.setIndicatorUnselectedColor(Color.GRAY);
-                        binding.imageSlider1.setScrollTimeInSec(4); //set scroll delay in seconds :
-                        binding.imageSlider1.startAutoCycle();
+        binding.imageSlider1.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        binding.imageSlider1.setAutoCycleDirection(binding.imageSlider1.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        binding.imageSlider1.setIndicatorSelectedColor(Color.WHITE);
+        binding.imageSlider1.setIndicatorUnselectedColor(Color.GRAY);
+        binding.imageSlider1.setScrollTimeInSec(4); //set scroll delay in seconds :
+        binding.imageSlider1.startAutoCycle();
 
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(SubCategoryActivity.this, "" + sliderImagesResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        } else {
-            AppClass.offline(SubCategoryActivity.this);
-        }
+        SliderBannerAdapter adapter1 = new SliderBannerAdapter(SubCategoryActivity.this, getBannerImages());
+
+        binding.imageSlider2.setSliderAdapter(adapter1);
+
+//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        binding.imageSlider2.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        binding.imageSlider2.setAutoCycleDirection(binding.imageSlider1.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        binding.imageSlider2.setIndicatorSelectedColor(Color.WHITE);
+        binding.imageSlider2.setIndicatorUnselectedColor(Color.GRAY);
+        binding.imageSlider2.setScrollTimeInSec(4); //set scroll delay in seconds :
+        binding.imageSlider2.startAutoCycle();
     }
 
     private void getLatestProducts(int page) {

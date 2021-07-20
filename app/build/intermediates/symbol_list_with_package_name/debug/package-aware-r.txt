@@ -2289,12 +2289,16 @@ drawable arrow
 drawable avd_hide_password
 drawable avd_show_password
 drawable ba
+drawable baby_care_slider
+drawable bakery_and_frozen_food_slider
+drawable bbr
 drawable bg_overlay
 drawable bg_rectangle_border
 drawable bg_rectangle_border_less
 drawable bg_rectangle_border_less_primary_color
 drawable bg_rectangle_white
 drawable bonus
+drawable brand_island
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2312,6 +2316,7 @@ drawable card_design
 drawable cart_add_minus_button
 drawable cheetos
 drawable circular_text_view_background_selector
+drawable clean_shain_slider
 drawable cmtp_bg_dialog
 drawable cmtp_bg_frame
 drawable common_full_open_on_phone
@@ -2598,6 +2603,15 @@ drawable gradient
 drawable gradient_round_google
 drawable gradient_roundl
 drawable grocery_outline_button
+drawable grocery_slider
+drawable home_slider_1
+drawable home_slider_2
+drawable home_slider_3
+drawable home_slider_4
+drawable home_slider_5
+drawable home_slider_6
+drawable home_slider_7
+drawable home_slider_8
 drawable ic_arrow_down
 drawable ic_arrow_drop_down_black_24dp
 drawable ic_arrow_right_24
@@ -2699,6 +2713,11 @@ drawable ic_wallet
 drawable ic_women_lounge_bg
 drawable items
 drawable login_edittext
+drawable masco_club_points_banner
+drawable masco_cosmetics_banner
+drawable masco_cosmetics_slider_1
+drawable masco_cosmetics_slider_2
+drawable masco_cosmetics_slider_3
 drawable masco_pk
 drawable men_lounge_outline_button
 drawable monthly_outline_button
@@ -2724,6 +2743,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pen_pencil_banner
+drawable pen_slider_1
+drawable pen_slider_2
+drawable pen_slider_3
+drawable pen_slider_4
+drawable pen_slider_5
+drawable pen_slider_6
+drawable personal_care_slider
 drawable places_autocomplete_toolbar_shadow
 drawable places_ic_clear
 drawable places_ic_search
@@ -2748,7 +2775,10 @@ drawable shape_circle_holo
 drawable slider_1
 drawable slider_2
 drawable slider_3
+drawable snacks_and_beverages_slider
+drawable splash
 drawable stationary_outline_button
+drawable stationery_slider
 drawable test_custom_background
 drawable textview_border
 drawable tooltip_frame_dark
@@ -2852,7 +2882,6 @@ id always
 id amu_text
 id appBarLayout4
 id app_bar
-id appname
 id arrow_imv
 id async
 id auto
@@ -3039,7 +3068,7 @@ id imageView17
 id imageView18
 id imageView19
 id imageView2
-id imageView3
+id imageView20
 id imageView4
 id imageView5
 id imageView6
@@ -3061,7 +3090,6 @@ id italic
 id item_country_rly
 id item_touch_helper_previous_elevation
 id iv_auto_image_slider
-id iv_gif_container
 id labeled
 id largeLabel
 id left
@@ -3071,7 +3099,6 @@ id line1
 id line3
 id line_my_club
 id line_profile
-id linear1
 id linearLayout
 id linearLayout2
 id linearLayout3
@@ -3089,7 +3116,6 @@ id loadmore_progress
 id locAddress
 id location_btn
 id login_link
-id logo
 id lottie_layer_name
 id lvExp
 id lvExp1
@@ -3231,7 +3257,6 @@ id prodDet_other_btn
 id prodDet_price_btn
 id prodMinusButton
 id prodMinusButtonHome
-id productListingimageSlider1
 id productQuanTextView
 id productQuanTextViewHome
 id profileAddressEditText
@@ -3275,6 +3300,7 @@ id rel_prodCart_home
 id relativeLayout
 id relativeLayout2
 id relativeLayout3
+id relativeLayout4
 id relativeLayoutInner
 id repeat
 id right
@@ -3304,6 +3330,9 @@ id scrollIndicatorUp
 id scrollView
 id scroll_view
 id scrollable
+id searchL
+id searchLayout
+id searchRl
 id search_badge
 id search_bar
 id search_button
@@ -3352,7 +3381,6 @@ id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
 id tag_accessibility_pane_title
-id tag_name
 id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -3396,10 +3424,10 @@ id textView29
 id textView3
 id textView30
 id textView31
-id textView32
 id textView33
 id textView34
 id textView35
+id textView36
 id textView4
 id textView5
 id textView6

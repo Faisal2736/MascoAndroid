@@ -43,24 +43,6 @@ public class SplashActivity extends AppCompatActivity {
 
         Typeface typeface = ResourcesCompat.getFont(this, R.font.blacklist);
 
-        TextView appname= findViewById(R.id.appname);
-        TextView tag_name= findViewById(R.id.tag_name);
-        appname.setTypeface(typeface);
-        tag_name.setTypeface(typeface);
-
-        // We use the Yoyo to make our app logo to bounce app and down.
-        //There is a lot of Attension Techniques styles
-        // example Flash, Pulse, RubberBand, Shake, Swing, Wobble, Bounce, Tada, StandUp, Wave.
-        // Your can change the techniques to fit your liking.
-
-        YoYo.with(Techniques.Bounce)
-                .duration(7000) // Time it for logo takes to bounce up and down
-                .playOn(findViewById(R.id.logo));
-
-        YoYo.with(Techniques.FadeInUp)
-                .duration(5000) // Time it for app name to fade in up
-                .playOn(findViewById(R.id.appname));
-
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo wifiInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         final NetworkInfo mobileInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);

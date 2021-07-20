@@ -1,5 +1,8 @@
 com/semicolons/masco/pk/viewHolders/LoadingVH.java
  com.semicolons.masco.pk.viewHolders.LoadingVH
+com/semicolons/masco/pk/adapters/SliderBannerAdapter.java
+ com.semicolons.masco.pk.adapters.SliderBannerAdapter
+ com.semicolons.masco.pk.adapters.SliderBannerAdapter$BannerHolder
 com/semicolons/masco/pk/dataModels/Points.java
  com.semicolons.masco.pk.dataModels.Points
 com/semicolons/masco/pk/dataModels/Order.java
@@ -23,7 +26,6 @@ com/semicolons/masco/pk/databinding/FragmentSecondBinding.java
  com.semicolons.masco.pk.databinding.FragmentSecondBinding
 com/semicolons/masco/pk/uiActivities/PointsActivity.java
  com.semicolons.masco.pk.uiActivities.PointsActivity
- com.semicolons.masco.pk.uiActivities.PointsActivity$1
 com/semicolons/masco/pk/adapters/LatestSellingProductAdapter.java
  com.semicolons.masco.pk.adapters.LatestSellingProductAdapter
  com.semicolons.masco.pk.adapters.LatestSellingProductAdapter$1
@@ -215,7 +217,6 @@ com/semicolons/masco/pk/uiActivities/SubCategoryActivity.java
  com.semicolons.masco.pk.uiActivities.SubCategoryActivity
  com.semicolons.masco.pk.uiActivities.SubCategoryActivity$1
  com.semicolons.masco.pk.uiActivities.SubCategoryActivity$2
- com.semicolons.masco.pk.uiActivities.SubCategoryActivity$3
 com/semicolons/masco/pk/uiActivities/ProductDetailActivity.java
  com.semicolons.masco.pk.uiActivities.ProductDetailActivity
  com.semicolons.masco.pk.uiActivities.ProductDetailActivity$1
@@ -243,7 +244,6 @@ com/semicolons/masco/pk/uiActivities/ProductDetailActivity.java
  com.semicolons.masco.pk.uiActivities.ProductDetailActivity$7
  com.semicolons.masco.pk.uiActivities.ProductDetailActivity$8
  com.semicolons.masco.pk.uiActivities.ProductDetailActivity$9
- com.semicolons.masco.pk.uiActivities.ProductDetailActivity$9$1
 com/semicolons/masco/pk/uiActivities/AllSubCategoriesActivities.java
  com.semicolons.masco.pk.uiActivities.AllSubCategoriesActivities
  com.semicolons.masco.pk.uiActivities.AllSubCategoriesActivities$1
@@ -300,7 +300,6 @@ com/semicolons/masco/pk/dataModels/DeleteFavResponse.java
  com.semicolons.masco.pk.dataModels.DeleteFavResponse
 com/semicolons/masco/pk/adapters/SliderAdapterExample.java
  com.semicolons.masco.pk.adapters.SliderAdapterExample
- com.semicolons.masco.pk.adapters.SliderAdapterExample$1
  com.semicolons.masco.pk.adapters.SliderAdapterExample$SliderAdapterVH
 com/semicolons/masco/pk/databinding/FragmentCategoryBinding.java
  com.semicolons.masco.pk.databinding.FragmentCategoryBinding
@@ -361,7 +360,6 @@ com/semicolons/masco/pk/fragments/CategoryFragment.java
  com.semicolons.masco.pk.fragments.CategoryFragment$1
  com.semicolons.masco.pk.fragments.CategoryFragment$2
  com.semicolons.masco.pk.fragments.CategoryFragment$3
- com.semicolons.masco.pk.fragments.CategoryFragment$4
 com/semicolons/masco/pk/databinding/ActivitySearchListBinding.java
  com.semicolons.masco.pk.databinding.ActivitySearchListBinding
 com/semicolons/masco/pk/SplashActivity.java

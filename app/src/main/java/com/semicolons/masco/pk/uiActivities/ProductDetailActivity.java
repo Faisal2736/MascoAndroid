@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -90,6 +91,7 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
     EditText et_search4;
     private TabLayout tabLayout;
     private ImageView img_addToFavLayout;
+    private TextView tvDiscountedPrice;
 
     public Button less_info_btn;
     /* access modifiers changed from: private */
@@ -103,6 +105,7 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
     Boolean isSecondPlace = false;
 
     ImageView img_search;
+    RelativeLayout searchL;
     private String catId;
 
     private int pQun;
@@ -123,7 +126,7 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
 
         initViews();
 
-        img_search.setOnClickListener(new View.OnClickListener() {
+        searchL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProductDetailActivity.this, SearchActivity.class);
@@ -298,6 +301,8 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
     private void initViews() {
         context = this;
         img_search = findViewById(R.id.img_search);
+        searchL = findViewById(R.id.searchL);
+        tvDiscountedPrice = findViewById(R.id.textView35);
         cartViewModel = new ViewModelProvider(this).get(CartViewModel.class);
         categoryFragmentViewModel = new ViewModelProvider(this).get(ProductListFragmentViewModel.class);
         recy_categories = findViewById(R.id.recy_categories);
@@ -329,6 +334,11 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
         product = (Product) intent.getSerializableExtra(Constants.PRODUCT_OBJECT);
         catId = intent.getStringExtra(Constants.SUB_CATEGORY_ID);
 
+        tv_product_title.setText(product.getProduct_title());
+        tv_product_description.setText(product.getProduct_description());
+        tv_price.setText(product.getPrice());
+        tvDiscountedPrice.setText( "Sale price " + product.getTotal_sale());
+
         if (isLogin) {
             userId = sharedPreferences.getInt(Constants.USER_ID, 0);
             favDataTableGlobal = wishViewModel.getFavourite(product.getProduct_id(), userId);
@@ -351,51 +361,48 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
         }
 
 
-        img_addToFavLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        img_addToFavLayout.setOnClickListener(v -> {
 
-                if (isLogin) {
+            if (isLogin) {
 
-                    if (favDataTableGlobal != null) {
-                        deleteDialog();
-                    } else {
-                        initProgresDialog();
-                        //int resourceId=getResources().getIdentifier("com.budget.budgetmanager:drawable/ic_baseline_star_filled_24","drawable",getPackageName());
-                        img_addToFavLayout.setImageResource(R.drawable.ic_baseline_star_filled_24);
-                        productListFragmentViewModel.addToFavourite(String.valueOf(product.getProduct_id()), userId).observe((LifecycleOwner) context, new Observer<AddFavResponse>() {
-                            @Override
-                            public void onChanged(AddFavResponse addFavResponse) {
-
-                                progressDialog.dismiss();
-                                if (addFavResponse != null) {
-                                    progressDialog.dismiss();
-                                    Toast.makeText(context, addFavResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                                    img_addToFavLayout.setImageResource(R.drawable.ic_baseline_star_filled_24);
-
-                                  /*  TextView textView=(TextView) addToFavLayout.getChildAt(0);
-                                    textView.setText("Remove from Favourite");*/
-                                    FavDataTable favDataTable = new FavDataTable();
-                                    favDataTable.setProductId(product.getProduct_id());
-                                    favDataTable.setUserId(userId);
-                                    productListFragmentViewModel.insertFavToDB(favDataTable);
-
-                                } else {
-                                    progressDialog.dismiss();
-                                    Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
-                        });
-                    }
-
-
+                if (favDataTableGlobal != null) {
+                    deleteDialog();
                 } else {
-                    Toast.makeText(context, "Please Login", Toast.LENGTH_SHORT).show();
+                    initProgresDialog();
+                    //int resourceId=getResources().getIdentifier("com.budget.budgetmanager:drawable/ic_baseline_star_filled_24","drawable",getPackageName());
+                    img_addToFavLayout.setImageResource(R.drawable.ic_baseline_star_filled_24);
+                    productListFragmentViewModel.addToFavourite(String.valueOf(product.getProduct_id()), userId).observe((LifecycleOwner) context, new Observer<AddFavResponse>() {
+                        @Override
+                        public void onChanged(AddFavResponse addFavResponse) {
+
+                            progressDialog.dismiss();
+                            if (addFavResponse != null) {
+                                progressDialog.dismiss();
+                                Toast.makeText(context, addFavResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                                img_addToFavLayout.setImageResource(R.drawable.ic_baseline_star_filled_24);
+
+                              /*  TextView textView=(TextView) addToFavLayout.getChildAt(0);
+                                textView.setText("Remove from Favourite");*/
+                                FavDataTable favDataTable = new FavDataTable();
+                                favDataTable.setProductId(product.getProduct_id());
+                                favDataTable.setUserId(userId);
+                                productListFragmentViewModel.insertFavToDB(favDataTable);
+
+                            } else {
+                                progressDialog.dismiss();
+                                Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    });
                 }
 
 
+            } else {
+                Toast.makeText(context, "Please Login", Toast.LENGTH_SHORT).show();
             }
+
+
         });
 
         addToCartButton.setOnClickListener(new View.OnClickListener() {
@@ -474,10 +481,6 @@ public class ProductDetailActivity extends AppCompatActivity implements RelatedP
                 .load(product.getImage_name())
                 .apply(options)
                 .into(expandedImage);
-
-        tv_product_title.setText(product.getProduct_title());
-        tv_product_description.setText(product.getProduct_description());
-        tv_price.setText(product.getPrice());
 
 
     }

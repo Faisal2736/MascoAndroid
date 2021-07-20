@@ -37,6 +37,7 @@ import com.semicolons.masco.pk.dataModels.CategoryDM;
 import com.semicolons.masco.pk.dataModels.DataItem;
 import com.semicolons.masco.pk.dataModels.ImagesListDM;
 import com.semicolons.masco.pk.dataModels.Product;
+import com.semicolons.masco.pk.dataModels.SliderImages;
 import com.semicolons.masco.pk.dataModels.SliderImagesResponse;
 import com.semicolons.masco.pk.dataModels.TopSellingResponse;
 import com.semicolons.masco.pk.dataModels.UpdateCartResponse;
@@ -149,7 +150,135 @@ public class HomeFragment extends Fragment {
         });
     }
 
+    private ArrayList<SliderImages> getSliderData(){
+
+        SliderImages sliderImages1 = new SliderImages();
+        sliderImages1.setImage_name("home_slider_1");
+
+        SliderImages sliderImages2 = new SliderImages();
+        sliderImages2.setImage_name("home_slider_2");
+
+        SliderImages sliderImages3 = new SliderImages();
+        sliderImages3.setImage_name("home_slider_3");
+
+        SliderImages sliderImages4 = new SliderImages();
+        sliderImages4.setImage_name("home_slider_4");
+
+        SliderImages sliderImages5 = new SliderImages();
+        sliderImages5.setImage_name("home_slider_5");
+
+        SliderImages sliderImages6 = new SliderImages();
+        sliderImages6.setImage_name("home_slider_6");
+
+        SliderImages sliderImages7 = new SliderImages();
+        sliderImages7.setImage_name("home_slider_7");
+
+        SliderImages sliderImages8 = new SliderImages();
+        sliderImages8.setImage_name("home_slider_8");
+
+        ArrayList<SliderImages> list = new ArrayList<>();
+        list.add(sliderImages1);
+        list.add(sliderImages2);
+        list.add(sliderImages3);
+        list.add(sliderImages4);
+        list.add(sliderImages5);
+        list.add(sliderImages6);
+        list.add(sliderImages7);
+        list.add(sliderImages8);
+
+        return list;
+
+    }
+
+    private ArrayList<SliderImages> getPenPencilData(){
+
+        SliderImages sliderImages1 = new SliderImages();
+        sliderImages1.setImage_name("pen_slider_1");
+
+        SliderImages sliderImages2 = new SliderImages();
+        sliderImages2.setImage_name("pen_slider_2");
+
+        SliderImages sliderImages3 = new SliderImages();
+        sliderImages3.setImage_name("pen_slider_3");
+
+        SliderImages sliderImages4 = new SliderImages();
+        sliderImages4.setImage_name("pen_slider_4");
+
+        SliderImages sliderImages5 = new SliderImages();
+        sliderImages5.setImage_name("pen_slider_5");
+
+        SliderImages sliderImages6 = new SliderImages();
+        sliderImages6.setImage_name("pen_slider_6");
+
+        ArrayList<SliderImages> list = new ArrayList<>();
+        list.add(sliderImages1);
+        list.add(sliderImages2);
+        list.add(sliderImages3);
+        list.add(sliderImages4);
+        list.add(sliderImages5);
+        list.add(sliderImages6);
+
+        return list;
+
+    }
+
+    private ArrayList<SliderImages> getCosmeticBannerData(){
+
+        SliderImages sliderImages1 = new SliderImages();
+        sliderImages1.setImage_name("masco_cosmetics_slider_1");
+
+        SliderImages sliderImages2 = new SliderImages();
+        sliderImages2.setImage_name("masco_cosmetics_slider_2");
+
+        SliderImages sliderImages3 = new SliderImages();
+        sliderImages3.setImage_name("masco_cosmetics_slider_3");
+
+        ArrayList<SliderImages> list = new ArrayList<>();
+        list.add(sliderImages1);
+        list.add(sliderImages2);
+        list.add(sliderImages3);
+
+        return list;
+
+    }
+
     private void getSliderImages() {
+
+        SliderAdapterExample adapter2 = new SliderAdapterExample(getActivity(), getSliderData());
+
+        binding.imageSlider2.setSliderAdapter(adapter2);
+
+//      sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        binding.imageSlider2.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        binding.imageSlider2.setAutoCycleDirection(binding.imageSlider2.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        binding.imageSlider2.setIndicatorSelectedColor(Color.WHITE);
+        binding.imageSlider2.setIndicatorUnselectedColor(Color.GRAY);
+        binding.imageSlider2.setScrollTimeInSec(4); //set scroll delay in seconds :
+        binding.imageSlider2.startAutoCycle();
+
+        SliderAdapterExample adapter1 = new SliderAdapterExample(getActivity(), getPenPencilData());
+
+        binding.imageSlider1.setSliderAdapter(adapter1);
+
+//      sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        binding.imageSlider1.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        binding.imageSlider1.setAutoCycleDirection(binding.imageSlider1.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        binding.imageSlider1.setIndicatorSelectedColor(Color.WHITE);
+        binding.imageSlider1.setIndicatorUnselectedColor(Color.GRAY);
+        binding.imageSlider1.setScrollTimeInSec(4); //set scroll delay in seconds :
+        binding.imageSlider1.startAutoCycle();
+
+        SliderAdapterExample adapter3 = new SliderAdapterExample(getActivity(), getCosmeticBannerData());
+
+        binding.imageSlider3.setSliderAdapter(adapter3);
+
+//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        binding.imageSlider3.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        binding.imageSlider3.setAutoCycleDirection(binding.imageSlider3.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        binding.imageSlider3.setIndicatorSelectedColor(Color.WHITE);
+        binding.imageSlider3.setIndicatorUnselectedColor(Color.GRAY);
+        binding.imageSlider3.setScrollTimeInSec(4); //set scroll delay in seconds :
+        binding.imageSlider3.startAutoCycle();
 
         if (AppClass.isOnline(getActivity())) {
 
@@ -173,36 +302,6 @@ public class HomeFragment extends Fragment {
                         binding.imageSlider.setIndicatorUnselectedColor(Color.GRAY);
                         binding.imageSlider.setScrollTimeInSec(4); //set scroll delay in seconds :
                         binding.imageSlider.startAutoCycle();
-
-                        binding.imageSlider1.setSliderAdapter(adapter);
-
-//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-                        binding.imageSlider1.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-                        binding.imageSlider1.setAutoCycleDirection(binding.imageSlider1.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-                        binding.imageSlider1.setIndicatorSelectedColor(Color.WHITE);
-                        binding.imageSlider1.setIndicatorUnselectedColor(Color.GRAY);
-                        binding.imageSlider1.setScrollTimeInSec(4); //set scroll delay in seconds :
-                        binding.imageSlider1.startAutoCycle();
-
-                        binding.imageSlider2.setSliderAdapter(adapter);
-
-//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-                        binding.imageSlider2.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-                        binding.imageSlider2.setAutoCycleDirection(binding.imageSlider2.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-                        binding.imageSlider2.setIndicatorSelectedColor(Color.WHITE);
-                        binding.imageSlider2.setIndicatorUnselectedColor(Color.GRAY);
-                        binding.imageSlider2.setScrollTimeInSec(4); //set scroll delay in seconds :
-                        binding.imageSlider2.startAutoCycle();
-
-                        binding.imageSlider3.setSliderAdapter(adapter);
-
-//                        sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-                        binding.imageSlider3.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-                        binding.imageSlider3.setAutoCycleDirection(binding.imageSlider3.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-                        binding.imageSlider3.setIndicatorSelectedColor(Color.WHITE);
-                        binding.imageSlider3.setIndicatorUnselectedColor(Color.GRAY);
-                        binding.imageSlider3.setScrollTimeInSec(4); //set scroll delay in seconds :
-                        binding.imageSlider3.startAutoCycle();
 
                     } else {
                         progressDialog.dismiss();
@@ -343,21 +442,30 @@ public class HomeFragment extends Fragment {
                         //   timeDealAdapter = new TopSellingAdapter(topSellingResponse.getData(), cartProductList, getActivity());
                         binding.recyclerLatestProducts.setAdapter(latestSellingProductAdapter);
 
+                        LatestSellingProductAdapter latestSellingProductAdapter1 = new LatestSellingProductAdapter(topSellingResponse.getData(), cartDataTableList, getActivity());
 
                         binding.rvPickOftheDay.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
-                        binding.rvPickOftheDay.setAdapter(latestSellingProductAdapter);
+                        binding.rvPickOftheDay.setAdapter(latestSellingProductAdapter1);
+
+                        LatestSellingProductAdapter latestSellingProductAdapter2 = new LatestSellingProductAdapter(topSellingResponse.getData(), cartDataTableList, getActivity());
 
                         binding.rvWeeklyDeals.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
-                        binding.rvWeeklyDeals.setAdapter(latestSellingProductAdapter);
+                        binding.rvWeeklyDeals.setAdapter(latestSellingProductAdapter2);
+
+                        LatestSellingProductAdapter latestSellingProductAdapter3 = new LatestSellingProductAdapter(topSellingResponse.getData(), cartDataTableList, getActivity());
 
                         binding.rvMonthlyDeals.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
-                        binding.rvMonthlyDeals.setAdapter(latestSellingProductAdapter);
+                        binding.rvMonthlyDeals.setAdapter(latestSellingProductAdapter3);
+
+                        LatestSellingProductAdapter latestSellingProductAdapter4 = new LatestSellingProductAdapter(topSellingResponse.getData(), cartDataTableList, getActivity());
 
                         binding.rvBundleOffers.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
-                        binding.rvBundleOffers.setAdapter(latestSellingProductAdapter);
+                        binding.rvBundleOffers.setAdapter(latestSellingProductAdapter4);
+
+                        LatestSellingProductAdapter latestSellingProductAdapter5 = new LatestSellingProductAdapter(topSellingResponse.getData(), cartDataTableList, getActivity());
 
                         binding.rvMostPopular.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
-                        binding.rvMostPopular.setAdapter(latestSellingProductAdapter);
+                        binding.rvMostPopular.setAdapter(latestSellingProductAdapter5);
 
 
                     } else {

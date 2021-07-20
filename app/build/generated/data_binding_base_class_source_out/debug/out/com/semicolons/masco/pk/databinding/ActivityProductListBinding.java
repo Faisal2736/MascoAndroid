@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.semicolons.masco.pk.R;
-import com.smarteist.autoimageslider.SliderView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ActivityProductListBinding implements ViewBinding {
   public final ImageView imgSearch;
 
   @NonNull
-  public final SliderView productListingimageSlider1;
+  public final RecyclerView recyCategories;
 
   @NonNull
-  public final RecyclerView recyCategories;
+  public final RelativeLayout searchRl;
 
   @NonNull
   public final Toolbar toolbar;
@@ -38,12 +38,12 @@ public final class ActivityProductListBinding implements ViewBinding {
   public final TextView tvNoBooking;
 
   private ActivityProductListBinding(@NonNull LinearLayout rootView, @NonNull ImageView imgSearch,
-      @NonNull SliderView productListingimageSlider1, @NonNull RecyclerView recyCategories,
+      @NonNull RecyclerView recyCategories, @NonNull RelativeLayout searchRl,
       @NonNull Toolbar toolbar, @NonNull TextView tvNoBooking) {
     this.rootView = rootView;
     this.imgSearch = imgSearch;
-    this.productListingimageSlider1 = productListingimageSlider1;
     this.recyCategories = recyCategories;
+    this.searchRl = searchRl;
     this.toolbar = toolbar;
     this.tvNoBooking = tvNoBooking;
   }
@@ -81,15 +81,15 @@ public final class ActivityProductListBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.productListingimageSlider1;
-      SliderView productListingimageSlider1 = rootView.findViewById(id);
-      if (productListingimageSlider1 == null) {
-        break missingId;
-      }
-
       id = R.id.recy_categories;
       RecyclerView recyCategories = rootView.findViewById(id);
       if (recyCategories == null) {
+        break missingId;
+      }
+
+      id = R.id.searchRl;
+      RelativeLayout searchRl = rootView.findViewById(id);
+      if (searchRl == null) {
         break missingId;
       }
 
@@ -105,8 +105,8 @@ public final class ActivityProductListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityProductListBinding((LinearLayout) rootView, imgSearch,
-          productListingimageSlider1, recyCategories, toolbar, tvNoBooking);
+      return new ActivityProductListBinding((LinearLayout) rootView, imgSearch, recyCategories,
+          searchRl, toolbar, tvNoBooking);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

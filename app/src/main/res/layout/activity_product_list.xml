@@ -52,6 +52,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
+        android:id="@+id/searchRl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -105,7 +106,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.smarteist.autoimageslider.SliderView
+            <!--<com.smarteist.autoimageslider.SliderView
                 android:id="@+id/productListingimageSlider1"
                 android:layout_width="340dp"
                 android:layout_height="320dp"
@@ -126,7 +127,21 @@
                 app:sliderScrollTimeInSec="1"
                 app:sliderStartAutoCycle="false">
 
-            </com.smarteist.autoimageslider.SliderView>
+            </com.smarteist.autoimageslider.SliderView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/masco_club_points_banner"
+                    android:scaleType="fitXY"/>
+
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recy_categories"

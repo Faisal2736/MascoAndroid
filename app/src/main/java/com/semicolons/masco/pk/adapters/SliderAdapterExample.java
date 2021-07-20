@@ -53,17 +53,11 @@ public class SliderAdapterExample extends
 
         SliderImages sliderItem = mSliderItems.get(position);
 
-        Glide.with(viewHolder.itemView)
-                .load(sliderItem.getImage_name())
-                .fitCenter()
-                .into(viewHolder.imageViewBackground);
+        int resId = context.getResources().getIdentifier(sliderItem.getImage_name(),"drawable",context.getPackageName());
 
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
+        viewHolder.imageViewBackground.setImageResource(resId);
+
+        viewHolder.itemView.setOnClickListener(v -> Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show());
     }
 
     @Override
@@ -76,13 +70,11 @@ public class SliderAdapterExample extends
 
         View itemView;
         ImageView imageViewBackground;
-        ImageView imageGifContainer;
         TextView textViewDescription;
 
         public SliderAdapterVH(View itemView) {
             super(itemView);
             imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
-            imageGifContainer = itemView.findViewById(R.id.iv_gif_container);
 //            textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider);
             this.itemView = itemView;
         }

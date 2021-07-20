@@ -99,9 +99,6 @@ public final class FragmentHome2Binding implements ViewBinding {
   public final TextView textView24;
 
   @NonNull
-  public final TextView textView32;
-
-  @NonNull
   public final TextView tvFeatureAll;
 
   private FragmentHome2Binding(@NonNull RelativeLayout rootView, @NonNull TextView allTv,
@@ -116,7 +113,7 @@ public final class FragmentHome2Binding implements ViewBinding {
       @NonNull RecyclerView rvMostPopular, @NonNull RecyclerView rvPickOftheDay,
       @NonNull RecyclerView rvWeeklyDeals, @NonNull NestedScrollView scrollView,
       @NonNull TextView textView16, @NonNull TextView textView20, @NonNull TextView textView24,
-      @NonNull TextView textView32, @NonNull TextView tvFeatureAll) {
+      @NonNull TextView tvFeatureAll) {
     this.rootView = rootView;
     this.allTv = allTv;
     this.brandIslandLayout = brandIslandLayout;
@@ -143,7 +140,6 @@ public final class FragmentHome2Binding implements ViewBinding {
     this.textView16 = textView16;
     this.textView20 = textView20;
     this.textView24 = textView24;
-    this.textView32 = textView32;
     this.tvFeatureAll = tvFeatureAll;
   }
 
@@ -324,12 +320,6 @@ public final class FragmentHome2Binding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView32;
-      TextView textView32 = rootView.findViewById(id);
-      if (textView32 == null) {
-        break missingId;
-      }
-
       id = R.id.tv_feature_all;
       TextView tvFeatureAll = rootView.findViewById(id);
       if (tvFeatureAll == null) {
@@ -340,7 +330,7 @@ public final class FragmentHome2Binding implements ViewBinding {
           imageSlider, imageSlider1, imageSlider2, imageSlider3, imageView13, imageView14,
           imageView15, imageView2, imageView9, imgSuperStore, recyMainCategories, recyTimeDeal,
           recyclerLatestProducts, rel1, rvBundleOffers, rvMonthlyDeals, rvMostPopular,
-          rvPickOftheDay, rvWeeklyDeals, scrollView, textView16, textView20, textView24, textView32,
+          rvPickOftheDay, rvWeeklyDeals, scrollView, textView16, textView20, textView24,
           tvFeatureAll);
     }
     String missingId = rootView.getResources().getResourceName(id);

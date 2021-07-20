@@ -23,6 +23,9 @@ public final class FragmentCategoryBinding implements ViewBinding {
   public final SliderView imageSlider1;
 
   @NonNull
+  public final SliderView imageSlider2;
+
+  @NonNull
   public final RecyclerView recyMainCategories;
 
   @NonNull
@@ -32,10 +35,11 @@ public final class FragmentCategoryBinding implements ViewBinding {
   public final RecyclerView rvMostPopular;
 
   private FragmentCategoryBinding(@NonNull LinearLayout rootView, @NonNull SliderView imageSlider1,
-      @NonNull RecyclerView recyMainCategories, @NonNull RecyclerView rvBundleOffers,
-      @NonNull RecyclerView rvMostPopular) {
+      @NonNull SliderView imageSlider2, @NonNull RecyclerView recyMainCategories,
+      @NonNull RecyclerView rvBundleOffers, @NonNull RecyclerView rvMostPopular) {
     this.rootView = rootView;
     this.imageSlider1 = imageSlider1;
+    this.imageSlider2 = imageSlider2;
     this.recyMainCategories = recyMainCategories;
     this.rvBundleOffers = rvBundleOffers;
     this.rvMostPopular = rvMostPopular;
@@ -74,6 +78,12 @@ public final class FragmentCategoryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageSlider2;
+      SliderView imageSlider2 = rootView.findViewById(id);
+      if (imageSlider2 == null) {
+        break missingId;
+      }
+
       id = R.id.recy_main_categories;
       RecyclerView recyMainCategories = rootView.findViewById(id);
       if (recyMainCategories == null) {
@@ -92,8 +102,8 @@ public final class FragmentCategoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCategoryBinding((LinearLayout) rootView, imageSlider1, recyMainCategories,
-          rvBundleOffers, rvMostPopular);
+      return new FragmentCategoryBinding((LinearLayout) rootView, imageSlider1, imageSlider2,
+          recyMainCategories, rvBundleOffers, rvMostPopular);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

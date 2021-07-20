@@ -1,39 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\MascoCopy\\Masco.pk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\apps\\MascoAndroid\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\H P\\.gradle\\caches\\transforms-2\\files-2.1\\9a26491d0ba109c5b7762187380a4de2\\core-1.3.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\H P\\.gradle\\caches\\transforms-2\\files-2.1\\43bcef72616f17a5db602c32054aed3c\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "8",
-                        "startColumns": "4",
-                        "startOffsets": "376",
-                        "endLines": "11",
-                        "endColumns": "12",
-                        "endOffsets": "544"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\H P\\.gradle\\caches\\transforms-2\\files-2.1\\3ab23da7c2c168793063ed2609218452\\jetified-daypickerlibrary-1.3\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\hamma\\.gradle\\caches\\transforms-2\\files-2.1\\4d40a086777ed497101475e8c2020db8\\jetified-daypickerlibrary-1.3\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -49,6 +20,35 @@
                         "endLines": "7",
                         "endColumns": "12",
                         "endOffsets": "371"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hamma\\.gradle\\caches\\transforms-2\\files-2.1\\9a26491d0ba109c5b7762187380a4de2\\core-1.3.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hamma\\.gradle\\caches\\transforms-2\\files-2.1\\43bcef72616f17a5db602c32054aed3c\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "8",
+                        "startColumns": "4",
+                        "startOffsets": "376",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "544"
                     }
                 }
             ]

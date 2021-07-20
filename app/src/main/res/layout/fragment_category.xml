@@ -20,7 +20,7 @@
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/imageSlider1"
                 android:layout_width="340dp"
-                android:layout_height="320dp"
+                android:layout_height="160dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="14dp"
                 android:elevation="4dp"
@@ -73,19 +73,29 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="125dp"
-                    android:src="@drawable/slider_1" />
-            </LinearLayout>
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider2"
+                android:layout_width="340dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:elevation="4dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="1.7dp"
+                app:sliderIndicatorRadius="1.2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="false"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,6 +140,7 @@
                     app:srcCompat="@drawable/masco_pk"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:scaleType="fitXY"
                     />
             </LinearLayout>
 

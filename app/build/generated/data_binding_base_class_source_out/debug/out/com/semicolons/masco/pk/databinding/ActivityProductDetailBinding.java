@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -23,12 +24,16 @@ public final class ActivityProductDetailBinding implements ViewBinding {
   public final ImageView imgSearch;
 
   @NonNull
+  public final RelativeLayout searchL;
+
+  @NonNull
   public final Toolbar toolbar;
 
   private ActivityProductDetailBinding(@NonNull LinearLayout rootView, @NonNull ImageView imgSearch,
-      @NonNull Toolbar toolbar) {
+      @NonNull RelativeLayout searchL, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.imgSearch = imgSearch;
+    this.searchL = searchL;
     this.toolbar = toolbar;
   }
 
@@ -65,13 +70,19 @@ public final class ActivityProductDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.searchL;
+      RelativeLayout searchL = rootView.findViewById(id);
+      if (searchL == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       Toolbar toolbar = rootView.findViewById(id);
       if (toolbar == null) {
         break missingId;
       }
 
-      return new ActivityProductDetailBinding((LinearLayout) rootView, imgSearch, toolbar);
+      return new ActivityProductDetailBinding((LinearLayout) rootView, imgSearch, searchL, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

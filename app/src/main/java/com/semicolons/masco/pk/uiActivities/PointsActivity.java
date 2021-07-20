@@ -33,7 +33,7 @@ public class PointsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("My Wallet");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         context=this;
-//        initViews();
+        initViews();
     }
 
     private void initViews() {
@@ -51,23 +51,20 @@ public class PointsActivity extends AppCompatActivity {
 
         int userId = sharedPreferences.getInt(Constants.USER_ID, 0);
 
-        pointsViewModel.getUserPointsById(userId).observe(this, new Observer<Points>() {
-            @Override
-            public void onChanged(Points points) {
+        pointsViewModel.getUserPointsById(userId).observe(this, points -> {
+            progressDialog.dismiss();
+            if(points.getStatus()==1){
                 progressDialog.dismiss();
-                if(points.getStatus()==1){
-                    progressDialog.dismiss();
-                    if(points.getTotalPoints()!=null && points.getTotalDiscount()!=null){
-                        totalPointsTextView.setText(points.getTotalPoints());
-                        totalPrice.setText(points.getTotalDiscount());
-                    }else {
-                        Toast.makeText(context,"No Data Found",Toast.LENGTH_SHORT).show();
-                    }
+                if(points.getTotalPoints()!=null && points.getTotalDiscount()!=null){
+                    totalPointsTextView.setText(points.getTotalPoints());
+                    totalPrice.setText(points.getTotalDiscount());
+                }else {
+                    Toast.makeText(context,"No Data Found",Toast.LENGTH_SHORT).show();
                 }
-                else {
-                    progressDialog.dismiss();
-                    Toast.makeText(context,points.getMessage(),Toast.LENGTH_SHORT).show();
-                }
+            }
+            else {
+                progressDialog.dismiss();
+                Toast.makeText(context,points.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }

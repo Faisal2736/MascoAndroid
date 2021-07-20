@@ -92,6 +92,7 @@ public class HomeActivity extends AppCompatActivity
     private Boolean exit = false;
     private int userId;
     ImageView img_search;
+    RelativeLayout rlSearch;
 
     private BottomNavigationView bottomNavigationView;
 
@@ -231,6 +232,7 @@ public class HomeActivity extends AppCompatActivity
         homeFragmentViewModel = new ViewModelProvider(this).get(HomeFragmentViewModel.class);
 
         img_search = findViewById(R.id.img_search);
+        rlSearch = findViewById(R.id.rlSearch);
 
 
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -252,7 +254,7 @@ public class HomeActivity extends AppCompatActivity
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(false);
 
-        img_search.setOnClickListener(view -> {
+        rlSearch.setOnClickListener(view -> {
             Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
             startActivity(intent);
         });
